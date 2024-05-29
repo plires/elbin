@@ -1,0 +1,19 @@
+{
+  "procesoblindaje": [
+    {
+      "id": 1,
+      "title": "01. Análisis de exposición",
+      "description": "Después de realizar inspecciones in situ y de un diálogo abierto con su organización, nuestros asesores realizarán el Análisis de la exposición a riesgo derivada de la operatoria empresaria."
+    },
+    {
+      "id": 2,
+      "title": "02. Evaluación de riesgos",
+      "description": "Detectados los puntos críticos se procede a una Evaluación de riesgos (divisados los riesgos potenciales, se evalúan su importancia y el eventual impacto sobre el giro empresario)."
+    },
+    {
+      "id": 3,
+      "title": "03. Programa de seguros",
+      "description": "Se desarrolla el Programa de Seguros adecuado a las necesidades detectadas y a lo que también su empresa crea conveniente."
+    }
+  ]
+}

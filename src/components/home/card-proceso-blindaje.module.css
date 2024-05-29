@@ -1,0 +1,127 @@
+.content {
+  border: solid 1px var(--primary-color);
+  padding: 12px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.content::before {
+  content: '';
+  position: absolute;
+  bottom: -68px;
+  left: calc(50% - 6px);
+  width: 13px;
+  height: 13px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.content::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  width: 1px;
+  height: 60px;
+  background: var(--primary-color);
+}
+
+.group:last-child .content {
+  margin-bottom: 0;
+}
+
+.group:last-child .content::after,
+.group:last-child .content::before {
+  display: none;
+}
+
+.content p {
+  margin-bottom: 0;
+  font-size: 0.85rem;
+}
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .group:last-child .content::after,
+  .group:last-child .content::before {
+    display: inline-block;
+  }
+
+  .group {
+    border-left: solid 1px var(--text-color) !important;
+    border-bottom: solid 1px var(--text-color) !important;
+    text-align: left;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+
+  .content {
+    text-align: left;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    height: 100%;
+  }
+
+  .content::before {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: -19px;
+    width: 13px;
+    height: 13px;
+  }
+
+  .content::after {
+    content: '';
+    position: absolute;
+    bottom: initial;
+    top: 0;
+    left: -12px;
+    width: 20px;
+    height: 1px;
+    background: var(--text-color);
+  }
+}
+
+@media (min-width: 992px) {
+  .content {
+    padding: 24px 12px;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1600px) {
+  .content p {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1800px) {
+}

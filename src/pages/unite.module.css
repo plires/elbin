@@ -1,0 +1,156 @@
+.section_unite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content_data {
+  padding-top: 60px !important;
+  padding-bottom: 30px !important;
+  background: var(--third-color);
+  text-align: center;
+  color: white;
+  border-bottom: solid 10px var(--primary-color);
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+.title {
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.frase {
+  color: white;
+  font-size: 0.85rem;
+}
+
+.content_form {
+  background: white;
+  padding-top: 30px;
+  color: var(--text-color);
+}
+
+.frase_encabezado {
+  color: var(--text-color);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.section_unite input::placeholder {
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.content_radios {
+  margin-bottom: 30px;
+}
+
+.content_radios h4,
+.content_radios label {
+  color: var(--text-color);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.content_btn {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.content_btn .btn {
+  background: var(--quart-color) !important;
+  border: none !important;
+}
+
+.content_btn .btn:hover {
+  background: var(--primary-color) !important;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+  .section_unite {
+    background: url('./../assets/img/unite/background-unite.webp');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+  }
+
+  .btn {
+    min-width: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .content_data {
+    border-bottom: none;
+    border-right: solid 10px var(--primary-color);
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .content_form {
+    padding: 80px !important;
+  }
+
+  .frase_encabezado {
+    text-align: left;
+    font-size: 1.125rem;
+    margin-bottom: 30px;
+  }
+
+  .last_input {
+    margin-bottom: 30px;
+  }
+
+  .content_btn {
+    margin-top: 60px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section_unite {
+    padding-top: 200px !important;
+    padding-bottom: 200px !important;
+  }
+
+  .logo {
+    width: 250px;
+  }
+
+  .title {
+    margin-bottom: 30px;
+  }
+
+  .content_data {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+
+  .content_form {
+    padding: 80px 120px !important;
+  }
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}

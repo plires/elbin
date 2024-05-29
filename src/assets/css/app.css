@@ -1,0 +1,142 @@
+/* Variables */
+:root {
+  --text-color: rgba(113, 113, 113, 1);
+  --primary-color: rgba(0, 145, 232, 1);
+  --secondary-color: rgba(202, 229, 255, 1);
+  --third-color: rgba(0, 40, 100, 1);
+  --quart-color: rgba(255, 0, 0, 1);
+}
+/* Variables end */
+
+.transition {
+  transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  -ms-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+}
+
+body {
+  background: white;
+  font-size: 16px;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-style: normal;
+  color: var(--text-color);
+}
+
+h2 {
+  color: var(--third-color);
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 5px;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  padding: 0 !important;
+  list-style: none;
+}
+
+/* Font Titles */
+.chillax {
+  font-family: 'Chillax';
+  font-weight: bold;
+  font-style: normal;
+}
+/* Font Titles end */
+
+#root main {
+  min-height: 70vh;
+}
+
+/* Seguros Page */
+.section_seguros,
+.section_seguros_detalle {
+  margin-top: 60px;
+}
+
+.section_seguros h2,
+.section_seguros_detalle h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+/* Seguros Page end */
+
+input:focus,
+textarea:focus {
+  box-shadow: none !important;
+}
+
+button:focus {
+  box-shadow: none !important;
+}
+button:not(.collapsed) {
+  background-color: transparent !important;
+}
+
+/* Seguros */
+.content_acordion_seguros .accordion-item {
+  border: none !important;
+}
+
+.content_acordion_seguros .accordion-button {
+  padding-bottom: 0;
+}
+/* Seguros end */
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+
+  /* Seguros Page */
+  .section_seguros,
+  .section_seguros_detalle {
+    margin-bottom: 160px;
+  }
+
+  .content_acordion_seguros .accordion-body .item {
+    border-bottom: solid 1px var(--text-color) !important;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .content_acordion_seguros .accordion-body .item:last-child {
+    border-bottom: none !important;
+  }
+  /* Seguros Page end */
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}

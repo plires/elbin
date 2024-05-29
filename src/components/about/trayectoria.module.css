@@ -1,0 +1,39 @@
+.trayectoria {
+  margin-bottom: 60px;
+}
+
+.trayectoria h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .trayectoria h2 {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}

@@ -1,0 +1,53 @@
+{
+  "staff": [
+    {
+      "id": 1,
+      "img": "/src/assets/img/about/elbinger.png",
+      "name": "Marcelo Elbinger",
+      "cargo": "Presidente"
+    },
+    {
+      "id": 2,
+      "img": "/src/assets/img/about/marisol.png",
+      "name": "Marisol Elbinger",
+      "cargo": "Directora ejecutiva"
+    },
+    {
+      "id": 3,
+      "img": "/src/assets/img/about/claveria.png",
+      "name": "Maria Eugenia Claveria",
+      "cargo": "Capacitación y reclutamiento"
+    },
+
+    {
+      "id": 4,
+      "img": "/src/assets/img/about/rivas.png",
+      "name": "Matias Gonzalez Rivas",
+      "cargo": "Administración vida"
+    },
+    {
+      "id": 5,
+      "img": "/src/assets/img/about/almada.png",
+      "name": "Gabriela Almada",
+      "cargo": "Administrativa contable"
+    },
+    {
+      "id": 6,
+      "img": "/src/assets/img/about/locurscio.png",
+      "name": "Eleana Tatiana Locurscio",
+      "cargo": "Administración general"
+    },
+    {
+      "id": 7,
+      "img": "/src/assets/img/about/mass.png",
+      "name": "Yanina Maass",
+      "cargo": "Administración"
+    },
+    {
+      "id": 8,
+      "img": "/src/assets/img/about/zuccarino.png",
+      "name": "Andrea Zuccarino",
+      "cargo": "Administración y finanzas"
+    }
+  ]
+}

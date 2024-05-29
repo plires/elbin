@@ -1,0 +1,40 @@
+{
+  "features": [
+    {
+      "id": 1,
+      "icon": "/src/assets/img/home/equidad.svg",
+      "title": "Equidad de género",
+      "description": "Trabajamos constantemente en crear ambientes diversos, equiparar oportunidades y generar un clima de trabajo en el que cada persona sienta que tiene un espacio para crecer de manera profesional y respetuosa."
+    },
+    {
+      "id": 2,
+      "icon": "/src/assets/img/home/profesionalismo.svg",
+      "title": "Profesionalismo",
+      "description": "Es para Elbin un factor determinante la seriedad, capacitación y trabajo en equipo en pos de ser una fuerza de ventas con soluciones claras y efectivas para satisfacer las necesidades de nuestros/as clientes/as."
+    },
+    {
+      "id": 3,
+      "icon": "/src/assets/img/home/objetivos.svg",
+      "title": "Objetivos",
+      "description": "Lograr objetivos que fueron planificados es una de las cosas más gratificantes de nuestra industria. Trabajamos codo a codo con todo el equipo para trazar planes de acción claros y reales que permitan lograr lo proyectado."
+    },
+    {
+      "id": 4,
+      "icon": "/src/assets/img/home/incentivos.svg",
+      "title": "Incentivos",
+      "description": "Motivamos de manera constante a través de nuestros incentivos a toda la fuerza de ventas de la agencia. Creemos que los reconocimientos son una parte fundamental de nuestra profesión."
+    },
+    {
+      "id": 5,
+      "icon": "/src/assets/img/home/trayectoria.svg",
+      "title": "Trayectoria",
+      "description": "Elbin es una empresa argentina reconocida por brindar un servicio integral en seguros, con más de 40 años de trayectoria en el mercado."
+    },
+    {
+      "id": 6,
+      "icon": "/src/assets/img/home/seguridad.svg",
+      "title": "Seguridad",
+      "description": "Nuestros seguros generales le permiten descansar ya que su patrimonio está bien protegido."
+    }
+  ]
+}

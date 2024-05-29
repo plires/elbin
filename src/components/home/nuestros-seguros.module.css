@@ -1,0 +1,46 @@
+.nuestros_seguros {
+  margin-bottom: 60px;
+}
+
+.nuestros_seguros h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.nuestros_seguros h3 {
+  padding-bottom: 10px;
+  border-bottom: solid 1px var(--text-color);
+  margin-bottom: 0;
+}
+
+.last_column {
+  margin-top: 60px !important;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .last_column {
+    margin-top: 0 !important;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+  .nuestros_seguros h2 {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}

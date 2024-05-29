@@ -1,0 +1,106 @@
+.accordion_custom {
+  position: relative;
+  margin-bottom: 15px;
+  border-radius: 0 !important;
+  border: none !important;
+  border-bottom: 1px solid var(--text-color) !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+}
+
+.accordion_custom h2 button {
+  margin-bottom: 0 !important;
+  color: var(--text-color) !important;
+  font-weight: 700 !important;
+  font-size: 1.25rem !important;
+  padding-left: 40px;
+  padding-top: 30px;
+  padding-bottom: 0;
+  line-height: 1.5 !important;
+}
+
+.accordion_custom button:focus {
+  box-shadow: none;
+}
+
+.accordion_custom button:hover {
+  opacity: 0.6;
+}
+
+.accordion_custom button:not(.collapsed) {
+  background-color: transparent;
+}
+
+.accordion_custom button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23FF0000' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+}
+
+.number {
+  content: '';
+  z-index: 1;
+  font-weight: 700;
+  position: absolute;
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  color: var(--primary-color);
+}
+
+.first {
+  margin-top: 15px;
+}
+
+.text_description {
+  font-size: 0.9rem !important;
+  padding-top: 0 !important;
+  padding-left: 40px !important;
+}
+
+.text_description a {
+  margin-top: 20px !important;
+  color: white !important;
+  font-size: 0.85rem !important;
+  font-weight: 300 !important;
+}
+
+.text_description a:hover {
+  font-weight: 300 !important;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  .accordion_custom h2 button {
+    font-size: 1.5rem !important;
+    padding-left: 60px;
+  }
+
+  .number {
+    font-size: 1rem;
+    color: var(--primary-color);
+  }
+
+  .text_description {
+    font-size: 1rem !important;
+    padding-left: 60px !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .accordion_custom h2 button {
+    font-size: 2.25rem !important;
+  }
+}
+
+@media (min-width: 1600px) {
+}

@@ -1,0 +1,55 @@
+.user_modal .content {
+  z-index: 0 !important ;
+}
+
+.title_staff {
+  margin-bottom: 0;
+  color: white;
+  font-weight: 700;
+}
+
+.modal_header_custom {
+  background: var(--primary-color);
+  color: white;
+}
+
+.user_modal .content_img {
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.comillas_izq,
+.comillas_der {
+  max-width: 15px;
+  margin-right: 10px;
+  padding-bottom: 10px;
+}
+
+.comillas_der {
+  margin-left: 10px;
+  transform: scaleX(-1);
+}
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}

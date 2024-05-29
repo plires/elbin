@@ -1,0 +1,140 @@
+.content_acordion_seguros {
+  margin-bottom: 60px;
+}
+
+.content_acordion_seguros h2 {
+  text-align: center;
+}
+
+.parrafo_btn {
+  color: var(--text-color);
+  padding: 20px 12px 20px 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.content_article {
+  margin-bottom: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12px;
+  margin-right: 12px;
+  max-width: 100px;
+  width: 100px;
+}
+
+.content_article p {
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.tilde {
+  width: 20px;
+}
+
+.content_acordion_seguros h3 {
+  text-align: center;
+  color: var(--third-color);
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+}
+
+.content_acordion_seguros p,
+.content_acordion_seguros ul li {
+  color: var(--text-color);
+}
+
+.content_acordion_seguros ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.content_acordion_seguros ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 15px;
+}
+
+.content_acordion_seguros ul li::after {
+  content: url('./../../assets/img/seguros/tilde.svg');
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: auto;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content_article {
+    max-width: 110px;
+    width: 110px;
+    min-height: 75px;
+    margin-bottom: 0;
+  }
+
+  .content_article p {
+    font-size: 0.85rem;
+  }
+
+  .tilde {
+    width: 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  .content {
+    justify-content: space-between !important;
+  }
+
+  .content_article {
+    max-width: auto;
+    width: auto;
+    margin: 0;
+  }
+
+  .content_article p {
+    min-height: 62px;
+  }
+
+  .content_acordion_seguros ul {
+    max-width: 60%;
+    margin: 60px auto;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}

@@ -1,0 +1,34 @@
+{
+  "segurospersonalescapitalizacion": [
+    {
+      "id": "1",
+      "icon": "/src/assets/img/seguros/tilde.svg",
+      "title": "ACCIONES"
+    },
+    {
+      "id": "2",
+      "icon": "/src/assets/img/seguros/tilde.svg",
+      "title": "BONOS"
+    },
+    {
+      "id": "3",
+      "icon": "/src/assets/img/seguros/tilde.svg",
+      "title": "FIDECOMISOS<br />FINANCIEROS"
+    },
+    {
+      "id": "4",
+      "icon": "/src/assets/img/seguros/tilde.svg",
+      "title": "PLAZOS FIJOS"
+    },
+    {
+      "id": "5",
+      "icon": "/src/assets/img/seguros/tilde.svg",
+      "title": "FONDOS COMUNES<br />DE INVERSIÓN"
+    },
+    {
+      "id": "6",
+      "icon": "/src/assets/img/seguros/tilde.svg",
+      "title": "FUTUROS"
+    }
+  ]
+}

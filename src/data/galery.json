@@ -1,0 +1,52 @@
+{
+  "galery": [
+    {
+      "id": 1,
+      "title": "Trip Elbin",
+      "class": "faja_light",
+      "img_src": "/src/assets/img/home/trip.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Capacitaciones",
+      "class": "faja_hard",
+      "img_src": "/src/assets/img/home/capacitaciones.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Despedida fin de año",
+      "class": "faja_light",
+      "img_src": "/src/assets/img/home/fiesta-fin-ano.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Lanzamiento comercial",
+      "class": "faja_hard",
+      "img_src": "/src/assets/img/home/lanzamiento-comercial.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Inauguración de oficina",
+      "class": "faja_light",
+      "img_src": "/src/assets/img/home/nuevas-oficinas.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Reuniones de líderes",
+      "class": "faja_hard",
+      "img_src": "/src/assets/img/home/reunion-lideres.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Reuniones de relacionamiento",
+      "class": "faja_light",
+      "img_src": "/src/assets/img/home/relacionamiento.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Lanzamiento comercial",
+      "class": "faja_hard",
+      "img_src": "/src/assets/img/home/lanzamiento-comercial.jpg"
+    }
+  ]
+}

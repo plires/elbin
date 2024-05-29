@@ -1,0 +1,70 @@
+{
+  "seguros": [
+    {
+      "id": 1,
+      "name": "SEGUROS DE VIDA",
+      "icon": "/src/assets/img/seguros/vida.svg",
+      "category": "SEGUROS PERSONALES",
+      "link": "/seguros/personales/vida",
+      "firstElement": "false",
+      "number": "01/",
+      "title": "Seguros de vida",
+      "description": "El seguro de protección ayuda a resguardar económicamente a su familia en caso de fallecimiento. Si bien esa indemnización no puede reponer la pérdida emocional, sí alivia la pérdida económica sufrida."
+    },
+    {
+      "id": 2,
+      "name": "SEGUROS DE CAPITALIZACIÓN",
+      "icon": "/src/assets/img/seguros/capitalizacion.svg",
+      "category": "SEGUROS PERSONALES",
+      "link": "/seguros/personales/capitalizacion",
+      "firstElement": "true",
+      "number": "02/",
+      "title": "Capitalización",
+      "description": "Tenemos la certeza de que acudir a un especialista para que lo oriente en sus inversiones, es en sí mismo una inversión a largo plazo."
+    },
+    {
+      "id": 3,
+      "name": "SEGUROS GENERALES PATRIMONIALES",
+      "icon": "/src/assets/img/seguros/patrimoniales.svg",
+      "category": "SEGUROS PERSONALES",
+      "link": "/seguros/personales/generales-patrimoniales",
+      "firstElement": "false",
+      "number": "03/",
+      "title": "Seguros generales <br />patrimoniales",
+      "description": "Los seguros generales le brindan la tranquilidad de saber que todo aquello que tanto le costó conseguir, está protegido"
+    },
+    {
+      "id": 4,
+      "name": "CONTINUIDAD SOCIETARIA",
+      "icon": "/src/assets/img/seguros/societaria.svg",
+      "category": "SEGUROS CORPORATIVOS",
+      "link": "/seguros/corporativos/continuidad-societaria",
+      "firstElement": "true",
+      "number": "04/",
+      "title": "Continuidad societaria",
+      "description": "Creemos que el mayor capital de todo negocio es su gente y sabemos también que el verdadero desafío no es encontrar el candidato ideal para un puesto de trabajo, sino saber deslizarlo frente a las ofertas del mercado laboral."
+    },
+    {
+      "id": 5,
+      "name": "SEGUROS DE CAPITALIZACIÓN",
+      "icon": "/src/assets/img/seguros/capitalizacion.svg",
+      "category": "SEGUROS CORPORATIVOS",
+      "link": "/seguros/corporativos/capitalizacion",
+      "firstElement": "false",
+      "number": "05/",
+      "title": "Capitalización",
+      "description": "Tenemos la certeza de que acudir a un especialista para que lo oriente en sus inversiones, es en sí mismo  una inversión a largo plazo."
+    },
+    {
+      "id": 6,
+      "name": "SEGUROS GENERALES",
+      "icon": "/src/assets/img/seguros/generales.svg",
+      "category": "SEGUROS CORPORATIVOS",
+      "link": "/seguros/corporativos/generales",
+      "firstElement": "false",
+      "number": "06/",
+      "title": "Seguros <br />generales",
+      "description": "Cada empresa es distinta y comprenderla significa asistirla mucho mejor."
+    }
+  ]
+}

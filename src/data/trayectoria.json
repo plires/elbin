@@ -1,0 +1,39 @@
+{
+  "trayectoria": [
+    {
+      "id": 1,
+      "year": "1980",
+      "description": "Elbin fue fundada en por Marcelo Elbinger. Por ese entonces se dedicaba exclusivamente a la venta de seguros patrimoniales desde una pequeña oficina en el subsuelo de un edificio de la calle Lavalle."
+    },
+    {
+      "id": 2,
+      "year": "1985",
+      "description": "Ya con más de ocho empleados entre administrativos/as y productores/as, se mudó a una nueva oficina a pocas cuadras de la anterior."
+    },
+    {
+      "id": 3,
+      "year": "1995",
+      "description": "Se convirtió en una de las primeras empresas del país en incorporar los seguros de vida."
+    },
+    {
+      "id": 4,
+      "year": "1996",
+      "description": "Hay un nuevo traslado, esta vez a Tucumán y Florida; y se incorporó la cobertura de salud individual, familiar y corporativa con el objetivo de brindar un servicio aún más integral y para acompañar la aparición de los nuevos productos en el mercado de los seguros."
+    },
+    {
+      "id": 5,
+      "year": "2002",
+      "description": "La empresa se instaló definitivamente en el amplio y luminoso piso de la calle Perón, y comenzó un nuevo desafío: sus horizontes se ampliaron hacia el asesoramiento en inversiones."
+    },
+    {
+      "id": 6,
+      "year": "2008",
+      "description": "Se convirtió en una de las primeras empresas del país en incorporar los seguros de vida."
+    },
+    {
+      "id": 7,
+      "year": "2024",
+      "description": "En la actualidad, Elbin administra más de diez mil clientes/as y sigue siendo reconocida por brindar un servicio integral en asesoramiento y venta de seguros de vida, inversiones y salud. "
+    }
+  ]
+}

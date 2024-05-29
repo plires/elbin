@@ -1,0 +1,40 @@
+.features h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.features .content_article:last-child .content {
+  margin-bottom: 0 !important;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+  .features {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .features {
+    margin-bottom: 20px;
+  }
+
+  .features h2 {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}

@@ -1,0 +1,34 @@
+{
+  "seguroscorporativoscontinuidadsocietaria": [
+    {
+      "id": "1",
+      "icon": "/src/assets/img/seguros/tilde.svg",
+      "title": "Seguro de vida societario."
+    },
+    {
+      "id": "2",
+      "icon": "/src/assets/img/seguros/tilde.svg",
+      "title": "Seguro de vida para hombre clave."
+    },
+    {
+      "id": "3",
+      "icon": "/src/assets/img/seguros/tilde.svg",
+      "title": "Seguros de vida optativos."
+    },
+    {
+      "id": "4",
+      "icon": "/src/assets/img/seguros/tilde.svg",
+      "title": "Seguros de vida colectivo"
+    },
+    {
+      "id": "5",
+      "icon": "/src/assets/img/seguros/tilde.svg",
+      "title": "Seguros de convenios sindicales."
+    },
+    {
+      "id": "6",
+      "icon": "/src/assets/img/seguros/tilde.svg",
+      "title": "Planes de ahorro."
+    }
+  ]
+}

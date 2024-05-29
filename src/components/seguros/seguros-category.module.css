@@ -1,0 +1,49 @@
+.seguros {
+  margin-bottom: 60px;
+}
+
+.seguros .row {
+  margin-bottom: 60px;
+}
+
+.seguros h2 {
+  text-align: center !important;
+}
+
+.seguros h3 {
+  color: var(--third-color);
+  margin-bottom: 20px;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .seguros {
+    margin-bottom: 160px;
+  }
+
+  .seguros h2 {
+    margin-bottom: 60px;
+  }
+
+  .seguros h3 {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}

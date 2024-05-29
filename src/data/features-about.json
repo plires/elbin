@@ -1,0 +1,16 @@
+{
+  "features": [
+    {
+      "id": 1,
+      "h2": "Nuestra Misión",
+      "icon": "/src/assets/img/about/mision.svg",
+      "description": "Transformar la vida de nuestros/as asesores/as dándoles las mejores herramientas para crecer en confianza, ganar experiencia, y poder desarrollarse en una profesión que es única. Mejorar su vivencia, para que puedan llegar a más personas y empresas generando consciencia de planificación financiera a largo plazo."
+    },
+    {
+      "id": 2,
+      "h2": "Nuestra Visión",
+      "icon": "/src/assets/img/about/vision.svg",
+      "description": "Convertirnos en la empresa con mayor foco puesto en el crecimiento de su equipo de trabajo. Logrando ambientes diversos y cálidos donde se promueva la conciencia aseguradora como valor compartido con nuestros/as asesores/as y clientes/as."
+    }
+  ]
+}

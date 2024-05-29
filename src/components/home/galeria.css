@@ -1,0 +1,118 @@
+.galeria {
+  margin-bottom: 60px;
+}
+
+.slick-slide {
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.center .slick-center .content_img_galeria {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.content_img_galeria img {
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.center .content_img_galeria {
+  position: relative;
+  opacity: 0.8;
+  transform: scale(0.8);
+  transition: 0.3s;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+}
+
+.center .content_img_galeria img {
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.galeria .faja_light,
+.galeria .faja_hard {
+  background: var(--primary-color);
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 5px;
+  text-align: center;
+}
+
+.galeria .faja_light p,
+.galeria .faja_hard p {
+  margin-bottom: 0;
+}
+
+.galeria .faja_hard {
+  background: var(--third-color);
+}
+
+.galeria .slick-prev {
+  left: 2px;
+  z-index: 3;
+}
+
+.galeria .slick-next {
+  right: 2px;
+  z-index: 3;
+}
+
+.galeria .link:focus-visible {
+  outline: none !important;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+  .galeria .faja_light p,
+  .galeria .faja_hard p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .galeria .faja_light p,
+  .galeria .faja_hard p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .galeria .faja_light p,
+  .galeria .faja_hard p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .galeria .faja_light p,
+  .galeria .faja_hard p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}

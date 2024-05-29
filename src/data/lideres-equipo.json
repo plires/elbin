@@ -1,0 +1,40 @@
+{
+  "lideres": [
+    {
+      "id": 1,
+      "img": "/src/assets/img/about/herrera.png",
+      "name": "Maryte Herrera",
+      "cargo": "Líder de equipo"
+    },
+    {
+      "id": 2,
+      "img": "/src/assets/img/about/cettour.png",
+      "name": "Aldo Alejandro Cettour",
+      "cargo": "Líder de equipo"
+    },
+    {
+      "id": 3,
+      "img": "/src/assets/img/about/ventura.png",
+      "name": "Susana Ventura",
+      "cargo": "Líder de equipo"
+    },
+    {
+      "id": 4,
+      "img": "/src/assets/img/about/marin.png",
+      "name": "Pedro Marín",
+      "cargo": "Líder de equipo"
+    },
+    {
+      "id": 5,
+      "img": "/src/assets/img/about/benavente.png",
+      "name": "Sandra Benavente",
+      "cargo": "Líder de equipo"
+    },
+    {
+      "id": 6,
+      "img": "/src/assets/img/about/abal.png",
+      "name": "Carlos Abal",
+      "cargo": "Líder de equipo"
+    }
+  ]
+}

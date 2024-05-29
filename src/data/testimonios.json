@@ -1,0 +1,40 @@
+{
+  "testimonios": [
+    {
+      "id": 1,
+      "description": "Fomentamos ganas de trabajar en equipo, de acompañar gente a crecer, de intentar buscar la mejor versión del otro y que eso sirva para dar una atención de excelencia a nuestros clientes.",
+      "user_img": "/src/assets/img/home/benavente.png",
+      "name": "Sandra Venavente"
+    },
+    {
+      "id": 2,
+      "description": "Elbin brinda la oportunidad de formar a las personas como asesores financieros y que tengan un crecimiento profesional y económico, ayudando a tener una sociedad más justa e inclusiva. El clima es muy bueno, tenemos un equipo colaborativo y solidario.",
+      "user_img": "/src/assets/img/home/marin.png",
+      "name": "Pedro Marín"
+    },
+    {
+      "id": 3,
+      "description": "Amo mi trabajo y la gran responsabilidad que conlleva ser Team Leader. Elbin es una familia, se genera un ambiente de generosidad muy grande, no existe la competencia con el otro sino con uno mismo.",
+      "user_img": "/src/assets/img/home/herrera.png",
+      "name": "Maryté Herrera"
+    },
+    {
+      "id": 4,
+      "description": "Capacitación que me permitió revisar distintas aristas de mi negocio, dando un paso más en mi crecimiento profesional y como persona.",
+      "user_img": "/src/assets/img/home/fernandez.png",
+      "name": "Mercedes Fernández"
+    },
+    {
+      "id": 6,
+      "description": "Me gustaría agradecer la convocatoria y ser parte del equipo de trabajo del Programa de Crecimiento Exponencial, junto a colegas comprometidos y que tienen la convicción de que nuestro asesoramiento puede agregar mucho valor en temas que están relacionados con sus metas y objetivos.",
+      "user_img": "/src/assets/img/home/garcia.png",
+      "name": "Cecilia García"
+    },
+    {
+      "id": 7,
+      "description": "Lo que más me gusta de ser parte de Elbin es trabajar en equipo, eso es el alma de la agencia, tratar de ayudar al otro, que si bien es una profesión individual, siempre intentamos de que este primero lo grupal.",
+      "user_img": "/src/assets/img/home/cettour.png",
+      "name": "Alejandro Cettour"
+    }
+  ]
+}

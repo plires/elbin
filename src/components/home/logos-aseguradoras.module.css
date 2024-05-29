@@ -1,0 +1,92 @@
+.logos_aseguradoras {
+  margin-bottom: 60px;
+}
+
+.logos_aseguradoras h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.featured {
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.logo_large {
+  max-width: 250px !important;
+}
+
+.logo_small {
+  max-width: 100px !important;
+  height: 50px !important;
+  object-fit: cover;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .logos_aseguradoras {
+    margin-bottom: 80px;
+  }
+
+  .logo_large {
+    margin-bottom: 20px;
+  }
+
+  .logo_small {
+    max-width: 150px !important;
+    height: 75px !important;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  .content {
+    justify-content: space-between;
+  }
+
+  .logos_aseguradoras h2 {
+    margin-bottom: 40px;
+  }
+
+  .logo_large {
+    max-width: 250px !important;
+  }
+
+  .logo_small {
+    max-width: 130px !important;
+    height: 65px !important;
+  }
+}
+
+@media (min-width: 1300px) {
+}
+
+@media (min-width: 1400px) {
+  .logo_large {
+    max-width: 250px !important;
+    margin-bottom: 30px;
+  }
+
+  .logo_small {
+    max-width: 150px !important;
+    height: 75px !important;
+  }
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}

@@ -1,0 +1,25 @@
+{
+  "contactos": [
+    {
+      "id": 1,
+      "icon": "/src/assets/img/contacto/telefono.svg",
+      "is_link": "true",
+      "type_link": "whatsapp",
+      "description": "+549 - 1155772005"
+    },
+    {
+      "id": 2,
+      "icon": "/src/assets/img/contacto/mail.svg",
+      "is_link": "true",
+      "type_link": "mail",
+      "description": "recepcion@elbinger.com.ar"
+    },
+    {
+      "id": 3,
+      "icon": "/src/assets/img/contacto/posicion.svg",
+      "is_link": "true",
+      "type_link": "address",
+      "description": "Mariscal Antonio José de Sucre 1530 - Oficina 203"
+    }
+  ]
+}

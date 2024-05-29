@@ -1,0 +1,33 @@
+.btn_red {
+  background: var(--quart-color) !important;
+  color: white !important;
+  font-weight: 700 !important;
+}
+
+.btn_red:hover {
+  background: var(--primary-color) !important;
+  color: white !important;
+  font-weight: 700 !important;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}

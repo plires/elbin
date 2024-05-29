@@ -1,0 +1,168 @@
+.content {
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 60px;
+  position: relative;
+  padding-top: 30px;
+}
+
+.small {
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small p,
+.small a {
+  font-size: 1.25rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.small a:hover {
+  color: var(--primary-color);
+}
+
+.content_icon {
+  position: absolute;
+  top: -22px;
+  left: 16px;
+  padding: 3px;
+  background: white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.content_icon img {
+  width: 32px;
+}
+
+.description {
+  margin-bottom: 0;
+  font-size: 0.85rem;
+}
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+  .content {
+    min-height: 235px;
+    margin-bottom: 60px;
+  }
+
+  .small {
+    min-height: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+    min-height: 275px;
+  }
+
+  .small {
+    min-height: 85px;
+    padding-top: 20px;
+  }
+
+  .small p,
+  .small a {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .content {
+    padding-top: 50px;
+    min-height: 290px;
+  }
+
+  .content_icon {
+    top: -30px;
+    left: 25px;
+    padding: 5px;
+  }
+
+  .content_icon img {
+    width: 50px;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .small {
+    min-height: 85px;
+    padding-top: 10px;
+  }
+
+  .small .content_icon {
+    align-items: flex-end;
+  }
+
+  .small .content_icon img {
+    max-width: 32px;
+  }
+
+  .small p,
+  .small a {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content {
+    min-height: 245px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+    min-height: 278px;
+  }
+
+  .small {
+    min-height: 85px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .content {
+    min-height: 220px;
+  }
+
+  .small {
+    min-height: 100px;
+  }
+
+  .small p,
+  .small a {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .content {
+    min-height: 260px;
+  }
+
+  .small {
+    min-height: 120px;
+  }
+
+  .description {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1800px) {
+}

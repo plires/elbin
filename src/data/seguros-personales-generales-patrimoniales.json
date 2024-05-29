@@ -1,0 +1,44 @@
+{
+  "segurospersonalesgeneralespatrimoniales": [
+    {
+      "id": "1",
+      "icon": "/src/assets/img/seguros/tilde.svg",
+      "title": "AUTOMOTORES"
+    },
+    {
+      "id": "2",
+      "icon": "/src/assets/img/seguros/tilde.svg",
+      "title": "FAMILIAR"
+    },
+    {
+      "id": "3",
+      "icon": "/src/assets/img/seguros/tilde.svg",
+      "title": "OBJETOS<br />DE VALOR"
+    },
+    {
+      "id": "4",
+      "icon": "/src/assets/img/seguros/tilde.svg",
+      "title": "ACCIDENTES<br />PERSONALES"
+    },
+    {
+      "id": "5",
+      "icon": "/src/assets/img/seguros/tilde.svg",
+      "title": "CAUCIÓN"
+    },
+    {
+      "id": "6",
+      "icon": "/src/assets/img/seguros/tilde.svg",
+      "title": "EMBARCACIONES"
+    },
+    {
+      "id": "7",
+      "icon": "/src/assets/img/seguros/tilde.svg",
+      "title": "SEGURO<br />TÉCNICO"
+    },
+    {
+      "id": "8",
+      "icon": "/src/assets/img/seguros/tilde.svg",
+      "title": "MALA PRAXIS"
+    }
+  ]
+}

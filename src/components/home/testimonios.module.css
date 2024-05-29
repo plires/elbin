@@ -1,0 +1,43 @@
+.testimonios {
+  margin-bottom: 60px;
+}
+
+.testimonios h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.testimonios .link:hover {
+  opacity: 0.6;
+}
+
+.slick-arrow {
+  left: 2px !important;
+  z-index: 1 !important;
+  display: none !important;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}
