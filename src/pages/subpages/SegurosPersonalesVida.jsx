@@ -22,7 +22,7 @@ const SegurosPersonalesVida = () => {
       <ContenidoSeguros
         type='plain_accordion'
         data={data}
-        textbtn='En Elbinger construimos el plan adecuado para su necesidad, en base a un paquete de productos altamente flexibles 
+        textbtn='En Elbin construimos el plan adecuado para su necesidad, en base a un paquete de productos altamente flexibles 
         y confiables. De este modo, le damos la tranquilidad de saber que si usted no está, el estilo de vida de sus seres más queridos continuará garantizado.Además de proteger a la familia, el dinero que se obtiene con un seguro de estas características también puede cubrir otras necesidades tales como: hipotecas o deudas, gastos sucesorios, donaciones
          y, fundamentalmente, la tranquilidad del saber que como sus seres más queridos ya están resguardados, usted puede disfrutar en vida de su dinero.
         '

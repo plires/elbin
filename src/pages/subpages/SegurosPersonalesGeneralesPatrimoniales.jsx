@@ -27,7 +27,7 @@ const SegurosPersonalesCapitalizacion = () => {
       <ContenidoSeguros
         data={data}
         type='accordion'
-        textbtn='Elbinger trabaja con compañías de seguros generales de primer nivel y con las coberturas más completas del mercado. Gracias a esta realidad podemos acompañarlo en todo el proceso que implica contratar un seguro: un ejecutivo 
+        textbtn='Elbin trabaja con compañías de seguros generales de primer nivel y con las coberturas más completas del mercado. Gracias a esta realidad podemos acompañarlo en todo el proceso que implica contratar un seguro: un ejecutivo 
         de cuentas estará a su lado y se encargará de realizar un análisis de sus necesidades, con el objetivo de lograr la mejor elección conjugando compañía, producto y precio. También, estaremos ahí para agilizar el proceso operativo
          y administrativo. Y por supuesto, en caso de siniestro, lo asesoraremos para que usted reciba en tiempo y forma el pago correcto de las eventuales indemnizaciones.'
       />
