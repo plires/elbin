@@ -10,7 +10,7 @@ const NotFound = () => {
         contactate con nosotros y te ayudaremos a encontrarlo
       </p>
       <div className='content_btn'>
-        <ButtonRed to='contacto' text='Seguir Navegando' />
+        <ButtonRed to='/' text='Seguir Navegando' />
       </div>
     </main>
   )
