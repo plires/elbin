@@ -22,7 +22,6 @@ import NotFound from './pages/NotFound'
 function App() {
   return (
     <>
-      {/* <Router basename='/dev/'> */}
       <Router>
         <ScrollToTop />
         <Header />
