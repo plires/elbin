@@ -17,7 +17,7 @@ const LideresEquipo = () => {
       </div>
       <div className='row'>
         <div className='col-md-10 offset-md-1'>
-          <div className='row'>
+          <div className={`row ${styles.content_lideres}`}>
             {lideres.map(item => (
               <div key={item.id} className='col-6 col-md-4'>
                 <CardMember item={item} />

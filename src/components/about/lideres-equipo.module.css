@@ -6,6 +6,10 @@
   text-align: center;
 }
 
+.content_lideres {
+  justify-content: center;
+}
+
 /* MEDIA QUERIES */
 @media (min-width: 576px) {
 }

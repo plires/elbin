@@ -35,6 +35,12 @@
       "img": "/src/assets/img/about/abal.png",
       "name": "Carlos Abal",
       "cargo": "Líder de equipo"
+    },
+    {
+      "id": 7,
+      "img": "/src/assets/img/about/mastragostino.png",
+      "name": "Soledad Mastragostino",
+      "cargo": "Líder de equipo"
     }
   ]
 }

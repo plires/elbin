@@ -33,21 +33,21 @@
     },
     {
       "id": 6,
-      "img": "/src/assets/img/about/locurscio.png",
-      "name": "Eleana Tatiana Locurscio",
-      "cargo": "Administración general"
-    },
-    {
-      "id": 7,
       "img": "/src/assets/img/about/mass.png",
       "name": "Yanina Maass",
       "cargo": "Administración"
     },
     {
-      "id": 8,
+      "id": 7,
       "img": "/src/assets/img/about/zuccarino.png",
       "name": "Andrea Zuccarino",
       "cargo": "Administración y finanzas"
+    },
+    {
+      "id": 8,
+      "img": "/src/assets/img/about/garibotto.png",
+      "name": "Melina Ayelen Garibotto",
+      "cargo": "Recepción"
     }
   ]
 }
