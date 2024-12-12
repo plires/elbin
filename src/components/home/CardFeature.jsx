@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { getLink } from '@/utils/dataUtils.js'
 import styles from './card-feature.module.css'
 
-const CardFeature = ({ item, type = 'large' }) => {
+const CardFeature = ({ item, type = 'large', extra = null }) => {
   {
     const content = item.is_link ? (
       <Link
@@ -13,7 +13,10 @@ const CardFeature = ({ item, type = 'large' }) => {
         dangerouslySetInnerHTML={{ __html: item.description }}
       ></Link>
     ) : (
-      <p className={`${styles.description}`}>{item.description}</p>
+      <p
+        className={`${styles.description}`}
+        dangerouslySetInnerHTML={{ __html: item.description }}
+      ></p>
     )
 
     if (type === 'large') {
@@ -27,6 +30,13 @@ const CardFeature = ({ item, type = 'large' }) => {
             {item.title && <h3>{item.title}</h3>}
 
             {content}
+            {extra && (
+              <img
+                className={`${styles.extra}`}
+                src={extra.img}
+                alt={extra.alt}
+              />
+            )}
           </div>
         </article>
       )

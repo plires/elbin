@@ -11,6 +11,12 @@
       "h2": "Nuestra Visión",
       "icon": "/src/assets/img/about/vision.svg",
       "description": "Convertirnos en la empresa con mayor foco puesto en el crecimiento de su equipo de trabajo. Logrando ambientes diversos y cálidos donde se promueva la conciencia aseguradora como valor compartido con nuestros/as asesores/as y clientes/as."
+    },
+    {
+      "id": 3,
+      "h2": "Distinción",
+      "icon": "/src/assets/img/about/distincion.svg",
+      "description": "Nos enorgullece formar parte del Sello Empresa Mujer, una distinción a proveedores liderados por mujeres que fomenta su participación en el mercado público. <br /><br /> En Elbin apostamos por la equidad de género, potenciando el liderazgo femenino en nuestro equipo y en la industria. También impulsamos Mujeres en Negocios, un programa gratuito que acompaña a mujeres en su desarrollo profesional, brindándoles herramientas y capacitación para construir empresas propias. <br /><br /> Además, nos alineamos con los valores de ONU Mujeres, la entidad de las Naciones Unidas dedicada a la igualdad de género y el empoderamiento de las mujeres, reafirmando nuestro compromiso con esta causa esencial. <br /><br />Seguimos construyendo un futuro más igualitario, liderando con valores y compromiso."
     }
   ]
 }
