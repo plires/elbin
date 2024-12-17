@@ -1,5 +1,6 @@
 import CardFeature from '@/components/home/CardFeature'
 import iconMujer from '@/assets/img/about/mujeres-onu.svg'
+import selloMujer from '@/assets/img/about/sello-mujer.svg'
 import { getFeaturesAbout } from '@/utils/dataUtils.js'
 
 import styles from './mision-vision.module.css'
@@ -10,6 +11,8 @@ const MisionVision = () => {
   const dataExtraDistincion = {
     img: iconMujer,
     alt: 'icono mujeres onu',
+    img_sello: selloMujer,
+    alt_sello: 'sello mujer buenos aires',
   }
 
   return (

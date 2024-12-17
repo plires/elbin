@@ -31,11 +31,18 @@ const CardFeature = ({ item, type = 'large', extra = null }) => {
 
             {content}
             {extra && (
-              <img
-                className={`${styles.extra}`}
-                src={extra.img}
-                alt={extra.alt}
-              />
+              <div className={`${styles.contentExtras}`}>
+                <img
+                  className={`${styles.sello}`}
+                  src={extra.img_sello}
+                  alt={extra.alt_sello}
+                />
+                <img
+                  className={`${styles.extra}`}
+                  src={extra.img}
+                  alt={extra.alt}
+                />
+              </div>
             )}
           </div>
         </article>

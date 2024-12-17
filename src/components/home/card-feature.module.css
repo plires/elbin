@@ -12,10 +12,20 @@
   padding-top: 30px;
 }
 
+.contentExtras {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sello {
+  width: 100px;
+}
+
 .extra {
   width: 150px;
-  margin-top: 20px;
-  margin-left: calc(100% - 150px);
+  margin-left: 15px;
 }
 
 .small {
@@ -87,6 +97,10 @@
   .small p,
   .small a {
     font-size: 0.85rem;
+  }
+
+  .contentExtras {
+    justify-content: flex-end;
   }
 }
 
