@@ -68,7 +68,7 @@ class App
     $cu = curl_init();
     curl_setopt($cu, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
     curl_setopt($cu, CURLOPT_POST, 1);
-    curl_setopt($cu, CURLOPT_POSTFIELDS, http_build_query(array('secret' => $_ENV['VITE_RECAPTCHA_SECRET_KEY_V3'], 'response' => $token)));
+    curl_setopt($cu, CURLOPT_POSTFIELDS, http_build_query(array('secret' => $_ENV['RECAPTCHA_SECRET_KEY_V3'], 'response' => $token)));
     curl_setopt($cu, CURLOPT_RETURNTRANSFER, true);
     $response = curl_exec($cu);
     curl_close($cu);
@@ -127,13 +127,13 @@ class App
   {
 
     // $objectPhpMailer->SMTPDebug  = 3;                    
-    $objectPhpMailer->Host       = $_ENV['VITE_SMTP'];
+    $objectPhpMailer->Host       = $_ENV['SMTP'];
     $objectPhpMailer->SMTPAuth   = true;
-    $objectPhpMailer->Username   = $_ENV['VITE_EMAIL_CLIENT'];
-    $objectPhpMailer->Password   = $_ENV['VITE_PASSWORD'];
+    $objectPhpMailer->Username   = $_ENV['EMAIL_CLIENT'];
+    $objectPhpMailer->Password   = $_ENV['PASSWORD'];
     $objectPhpMailer->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $objectPhpMailer->CharSet    = $_ENV['VITE_EMAIL_CHARSET'];
-    $objectPhpMailer->Port       = $_ENV['VITE_EMAIL_PORT'];
+    $objectPhpMailer->Port       = $_ENV['EMAIL_PORT'];
 
     return $objectPhpMailer;
   }

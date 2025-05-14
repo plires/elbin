@@ -15,7 +15,7 @@ class RepositorioSQL extends Repositorio
   {
 
     try {
-      $this->conexion = new PDO($_ENV['VITE_DSN'], $_ENV['VITE_DB_USER'], $_ENV['VITE_DB_PASS']);
+      $this->conexion = new PDO($_ENV['DSN'], $_ENV['DB_USER'], $_ENV['DB_PASS']);
     } catch (Exception $e) {
       echo 'No se pudo conectar a la base de datos. Intente en un momento por favor...';
     }
