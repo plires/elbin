@@ -71,6 +71,52 @@
   background: var(--primary-color) !important;
 }
 
+/* Landing */
+.contentTitleLanding {
+  background: var(--third-color) !important;
+  padding-top: 30px;
+}
+
+.contentTitleLanding h2 {
+  color: white;
+  margin-bottom: 0;
+  font-size: 1.25rem;
+}
+
+.contentTitleLanding h2 br {
+  display: none;
+}
+
+.section_unite_landing .frase span {
+  font-weight: 700;
+}
+
+.section_unite_landing .frase :global(.colorPrimary) {
+  color: var(--primary-color);
+}
+
+.section_unite_landing .frase_encabezado {
+  color: var(--third-color);
+}
+
+.section_unite_landing .frase_encabezado span {
+  font-weight: 700;
+}
+
+.section_unite_landing :global(.form-control::placeholder) {
+  color: var(--third-color);
+}
+
+.section_unite_landing :global(.form-control) {
+  border: solid 1px var(--primary-color);
+}
+
+.section_unite_landing .content_radios h4,
+.section_unite_landing .content_radios label {
+  color: var(--third-color);
+}
+/* Landing end */
+
 /* MEDIA QUERIES */
 @media (min-width: 576px) {
   .section_unite {
@@ -85,9 +131,34 @@
   .btn {
     min-width: 300px;
   }
+
+  /* Landing */
+  .section_unite_landing {
+    padding-bottom: 60px;
+  }
+
+  .contentTitleLanding {
+    background: transparent !important;
+    padding-bottom: 30px;
+  }
+
+  .contentTitleLanding h2 {
+    font-size: 1.5rem;
+  }
+
+  .contentTitleLanding h2 br {
+    display: inline-block;
+  }
+  /* Landing end */
 }
 
 @media (min-width: 768px) {
+  /* Landing */
+  .contentTitleLanding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  /* Landing end */
 }
 
 @media (min-width: 992px) {
@@ -112,14 +183,20 @@
     margin-bottom: 30px;
   }
 
-  .last_input {
-    margin-bottom: 30px;
-  }
-
   .content_btn {
     margin-top: 60px;
     margin-bottom: 0;
   }
+
+  /* Landing */
+  .contentTitleLanding h2 {
+    font-size: 1.75rem;
+  }
+
+  .section_unite_landing .frase {
+    font-size: 1.25rem;
+  }
+  /* Landing end */
 }
 
 @media (min-width: 1200px) {
@@ -144,9 +221,24 @@
   .content_form {
     padding: 80px 120px !important;
   }
+
+  /* Landing */
+  .contentTitleLanding h2 {
+    font-size: 1.75rem !important;
+  }
+
+  .section_unite_landing .frase {
+    font-size: 1.5rem;
+  }
+  /* Landing end */
 }
 
 @media (min-width: 1400px) {
+  /* Landing */
+  .contentTitleLanding h2 {
+    font-size: 2rem !important;
+  }
+  /* Landing end */
 }
 
 @media (min-width: 1600px) {

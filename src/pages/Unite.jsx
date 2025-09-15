@@ -1,27 +1,40 @@
 import { useState } from 'react'
+import PDFDownload from '@/components/landing/PDFDownload'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 import ErrorInput from '@/components/commons/ErrorInput'
 import axios from 'axios'
-import { ToastContainer, toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 import Loader from '@/components/commons/Loader'
-
 import { validationUnite } from '@/utils/dataUtils.js'
 
-import styles from './unite.module.css'
+import bgUniteLanding from './../assets/img/landing/background-oficina.webp'
 import logo from '@/assets/img/unite/logo-elbin-large-white.svg'
 
-const Unite = () => {
+import styles from './unite.module.css'
+
+const Unite = ({
+  titleForm = false,
+  titleAside = false,
+  descriptionAside = false,
+  type = 'default',
+  textBTN,
+  titleLanding = '',
+}) => {
   const [loading, setLoading] = useState(false)
-  const [wordBtn, setWordBtn] = useState('ENVIAR')
+  const [wordBtn, setWordBtn] = useState(textBTN)
   const { executeRecaptcha } = useGoogleReCaptcha()
+  const [showPDF, setShowPDF] = useState(false)
 
   const sendForm = async (values, { setSubmitting, resetForm }) => {
-    console.log(values)
     setLoading(true)
     setWordBtn('ENVIANDO...')
     const token = await executeRecaptcha('form_contacto')
-    values.origin = 'Formulario de Unite al equipo'
+    if (type === 'default') {
+      values.origin = 'Formulario de Unite al equipo'
+    } else if (type === 'landing') {
+      values.origin = 'Formulario de Landing Page'
+    }
     values.recaptchaToken = token
 
     try {
@@ -35,6 +48,12 @@ const Unite = () => {
 
       if (responseData.success) {
         toast.success(responseData.msg_success)
+
+        // 🔹 Si es landing, habilitamos el PDF
+        if (type === 'landing') {
+          setShowPDF(true)
+        }
+
         resetForm()
       } else {
         responseData.errors.map(error => {
@@ -51,13 +70,14 @@ const Unite = () => {
 
     setSubmitting(false)
     setLoading(false)
-    setWordBtn('ENVIAR')
+    setWordBtn(textBTN)
     resetForm()
   }
 
   const initFormDefault = {
     name: '',
     email: '',
+    phoneLinkedin: '',
     experiencia_seguros: '',
     experiencia_ventas: '',
     actualmente_trabajando: '',
@@ -68,10 +88,30 @@ const Unite = () => {
   return (
     <>
       {loading && <Loader />}
-      <main className={`section_unite ${styles.section_unite}`}>
+      <section
+        data-aos='fade-up'
+        style={
+          type === 'landing'
+            ? {
+                background: `url(${bgUniteLanding})`,
+              }
+            : {}
+        }
+        className={`section_unite ${type === 'landing' ? styles.section_unite_landing : styles.section_unite}`}
+      >
         {loading && <div>Loading...</div>}
-        <ToastContainer />
         <div className='container'>
+          {type === 'landing' && (
+            <div className={`row ${styles.contentTitleLanding}`}>
+              <div className='col-md-12'>
+                <h2
+                  dangerouslySetInnerHTML={{ __html: titleLanding }}
+                  className={`chillaxBold ${styles.titleLanding}`}
+                />
+              </div>
+            </div>
+          )}
+
           <div className='row'>
             <div className={`col-lg-4 ${styles.content_data}`}>
               <img
@@ -79,22 +119,26 @@ const Unite = () => {
                 src={logo}
                 alt='logo elbin'
               />
-              <div className={`${styles.data}`}>
-                <p className={`${styles.title}`}>¡Sumate al equipo!</p>
-                <p className={`${styles.frase}`}>
-                  En Elbin nuestro objetivo es transformar la vida de
-                  nuestros/as asesores/as dándoles las mejores herramientas para
-                  crecer en confianza, ganar experiencia y poder desarrollarse
-                  en una profesión que es única.
-                </p>
+              <div>
+                {titleAside && (
+                  <p className={`${styles.title}`}>{titleAside}</p>
+                )}
+                {descriptionAside && (
+                  <p
+                    dangerouslySetInnerHTML={{ __html: descriptionAside }}
+                    className={styles.frase}
+                  />
+                )}
               </div>
             </div>
 
             <div className={`col-lg-8 ${styles.content_form}`}>
-              <p className={`${styles.frase_encabezado}`}>
-                A continuación, te pediremos algunos datos personales para poder
-                evaluar tu perfil
-              </p>
+              {titleForm && (
+                <p
+                  dangerouslySetInnerHTML={{ __html: titleForm }}
+                  className={`${styles.frase_encabezado}`}
+                />
+              )}
 
               <Formik
                 initialValues={initFormDefault}
@@ -115,7 +159,7 @@ const Unite = () => {
                       <ErrorMessage name='name' component={ErrorInput} />
                     </div>
 
-                    <div className={`${styles.last_input}`}>
+                    <div className='mb-3'>
                       <Field
                         id='email'
                         className='form-control'
@@ -126,6 +170,23 @@ const Unite = () => {
                       />
                       <ErrorMessage name='email' component={ErrorInput} />
                     </div>
+
+                    {type === 'landing' && (
+                      <div className='mb-3'>
+                        <Field
+                          id='phoneLinkedin'
+                          className='form-control'
+                          type='text'
+                          name='phoneLinkedin'
+                          placeholder='Teléfono / Linkedin (opcional)'
+                          aria-describedby='phoneLinkedinHelp'
+                        />
+                        <ErrorMessage
+                          name='phoneLinkedin'
+                          component={ErrorInput}
+                        />
+                      </div>
+                    )}
 
                     <div className={`${styles.content_radios}`}>
                       <h4>Experiencia en seguros</h4>
@@ -332,7 +393,10 @@ const Unite = () => {
             </div>
           </div>
         </div>
-      </main>
+      </section>
+
+      {/* 🔹 Renderizado condicional del PDF */}
+      {showPDF && <PDFDownload onClose={() => setShowPDF(false)} />}
     </>
   )
 }
