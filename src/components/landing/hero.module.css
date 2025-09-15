@@ -1,0 +1,144 @@
+.hero {
+  background-image: url('./../../assets/img/landing/header.webp');
+  background-repeat: no-repeat;
+  background-position: 70% 50%;
+  background-size: cover;
+  padding: 30px 12px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  color: white;
+  padding-left: 18px;
+  margin-bottom: 2rem;
+}
+
+.hero .strong {
+  color: white;
+}
+
+.customList {
+  list-style: none;
+  padding-left: 0;
+  max-width: 80%;
+  color: white;
+}
+
+.customList li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+
+.customList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-image: url('./../../assets/img/landing/circle.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.customList li span {
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block !important;
+  margin-left: 18px !important;
+  font-weight: normal !important;
+  border: none;
+}
+
+.btn:hover {
+  font-weight: normal !important;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 60px;
+  }
+
+  .hero h1 {
+    padding-left: 28px;
+  }
+
+  .customList {
+    margin-bottom: 60px;
+    max-width: 60%;
+  }
+
+  .customList li {
+    padding-left: 28px;
+    font-size: 1.25rem;
+  }
+
+  .customList li::before {
+    top: 18px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+  }
+
+  .btn {
+    margin-left: 28px !important;
+    font-size: 1.25rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    min-height: 700px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+  .hero {
+    min-height: 800px;
+    background-position: 100% 50%;
+    padding-left: 110px;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .customList li {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (min-width: 1800px) {
+  .hero {
+    min-height: 850px;
+  }
+}

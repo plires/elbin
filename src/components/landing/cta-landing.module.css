@@ -1,0 +1,55 @@
+.ctaLanding {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.ctaLanding p {
+  color: var(--third-color);
+  font-size: 1.25rem;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .ctaLanding p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    font-size: 1.25rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .ctaLanding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .ctaLanding p {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+  .ctaLanding p {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1700px) {
+}
+
+@media (min-width: 1800px) {
+}

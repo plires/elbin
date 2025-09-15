@@ -1,0 +1,133 @@
+/* Overlay (fondo negro translúcido) */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  display: grid;
+  place-items: center;
+  z-index: 10;
+  padding: 1rem;
+}
+
+/* Contenedor del modal */
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  background: var(--third-color);
+  color: #fff;
+  border-radius: 18px;
+  padding: 2.25rem 2rem 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+/* Botón cerrar (X) */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease;
+}
+.close:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: scale(1.05);
+}
+
+/* Título */
+.title {
+  color: white;
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Botón de descarga */
+.downloadBtn {
+  display: inline-block;
+  width: 100%;
+  max-width: 320px;
+  padding: 0.95rem 1.25rem;
+  border-radius: 12px;
+  color: white;
+  background: var(--primary-color);
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease,
+    background 0.2s ease;
+  box-shadow: 0 8px 28px rgba(0, 145, 232, 0.35);
+}
+.downloadBtn:hover {
+  background: var(--secondary-color);
+  color: var(--third-color);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 34px rgba(0, 145, 232, 0.42);
+}
+.downloadBtn:active {
+  transform: translateY(0);
+}
+
+/* Texto de ayuda */
+.helperText {
+  margin-top: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+}
+.helperText kbd {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 0.1rem 0.4rem;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+  font-size: 0.8em;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+  .modal {
+    padding: 2.5rem 2.25rem 2.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .downloadBtn {
+    max-width: 340px;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1700px) {
+}
+
+@media (min-width: 1800px) {
+}

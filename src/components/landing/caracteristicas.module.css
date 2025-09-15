@@ -1,0 +1,76 @@
+.caracteristicas {
+  position: relative;
+  background: var(--secondary-color);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.caracteristicas h2 br:nth-of-type(1) {
+  display: none;
+}
+
+.caracteristicas h2 span {
+  font-weight: 700;
+  color: var(--quart-color);
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+  .caracteristicas {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .caracteristicas h2 {
+    margin-bottom: 2rem;
+  }
+
+  .caracteristicas h2 br:nth-of-type(1) {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1700px) {
+  .flechasIzq,
+  .flechasDer {
+    position: absolute;
+    top: 50%;
+    left: 0.5%;
+    background-image: url('./../../assets/img/landing/flechas.png');
+    background-repeat: no-repeat;
+    transform: translateY(-15%);
+    width: 185px;
+    height: 245px;
+  }
+
+  .flechasDer {
+    left: initial;
+    right: 0.5%;
+    transform: translateY(-15%) rotate(180deg);
+  }
+}
+
+@media (min-width: 1800px) {
+  .flechasIzq {
+    left: 2.5%;
+  }
+
+  .flechasDer {
+    right: 2.5%;
+  }
+}

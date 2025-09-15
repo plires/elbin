@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "description": "<span>Sólo 1 de cada 10 argentinos cuenta con un seguro de vida</span> (vs. 3 de cada 10 en el mundo).",
+      "type": "estadistica",
+      "icon": "icon-persons.svg",
+      "alt": "icono persons",
+      "extraCss": ""
+    },
+    {
+      "id": 2,
+      "description": "<span>Vida y ahorro representan menos del 15% del mercado asegurador,</span> una oportunidad poco explorada.",
+      "type": "estadistica",
+      "icon": "icon-lupa.svg",
+      "alt": "icono lupa",
+      "extraCss": ""
+    },
+    {
+      "id": 3,
+      "description": "<span>Existen más de 50.000 productores activos, pero muy pocos especializados</span> en este segmento.",
+      "type": "estadistica",
+      "icon": "icon-user.svg",
+      "alt": "icono user",
+      "extraCss": ""
+    },
+    {
+      "id": 4,
+      "description": "<span>Independencia para combinarlo con tu profesión actual o </span>iniciar una nueva carrera.",
+      "type": "caracteristica",
+      "icon": "icon-balanza.svg",
+      "alt": "icono balanza",
+      "extraCss": "itemSpecial"
+    },
+    {
+      "id": 5,
+      "description": "<span>Un plan de carrera escalable junto a Zurich Int Life</span> (5 etapas de productor, 3 de líder, 2 de agencia).",
+      "type": "caracteristica",
+      "icon": "icon-escalera.svg",
+      "alt": "icono escalera",
+      "extraCss": "itemSpecial"
+    },
+    {
+      "id": 6,
+      "description": "<span>Ingresos reales: desde $2M</span> de comisión generada mensualmente al empezar, <span>hasta $10M</span> en perfiles de alta performance.",
+      "type": "caracteristica",
+      "icon": "icon-crecimiento.svg",
+      "alt": "icono crecimiento",
+      "extraCss": "itemSpecial"
+    },
+    {
+      "id": 7,
+      "description": "<span>Mentoría y acompañamiento permanente:</span> inducción, líderes de equipo, capacitaciones cada 15 días, encuentros globales de Agencia, capacitaciones de Zurich, coaching individual.",
+      "type": "caracteristica",
+      "icon": "icon-profesor.svg",
+      "alt": "icono profesor",
+      "extraCss": "itemSpecial"
+    },
+    {
+      "id": 8,
+      "description": "<span>Reconocimientos únicos:<br /><br />Convenciones internacionales de Zurich</span> (últimos destinos España, Canadá, próximo Bélgica - Holanda) <span>+ viajes propios de Elbin</span> (últimos destinos Mendoza, El Calafate, próximo San Martín de los Andes). <span>Incentivos mensuales</span> con juegos interactivos y encuentros de relacionamiento.",
+      "type": "caracteristica-long",
+      "icon": "icon-copa.svg",
+      "alt": "icono copa",
+      "extraCss": "itemSpecial"
+    }
+  ]
+}
