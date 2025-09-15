@@ -14,6 +14,7 @@ import segurosCorporativosGenerales from '@/data/seguros-corporativos-generales.
 import segurosCorporativosContinuidadSocietaria from '@/data/seguros-corporativos-continuidad-societaria.json'
 import contactos from '@/data/contactos.json'
 import blindaje from '@/data/proceso-blindaje.json'
+import Landing from '@/data/landing.json'
 
 export const getTestimonios = key => testimonios[key]
 export const getGalery = key => galery[key]
@@ -36,6 +37,7 @@ export const getSegurosCorporativosContinuidadSocietaria = key =>
   segurosCorporativosContinuidadSocietaria[key]
 export const getContactos = key => contactos[key]
 export const getProcesoBlindaje = key => blindaje[key]
+export const getItemsLanding = key => Landing[key]
 
 export const validation = values => {
   const errors = {}
@@ -90,6 +92,14 @@ export const validationUnite = values => {
   return errors
 }
 
+export const getImageURL = name => {
+  return new URL(`../assets/img/${name}`, import.meta.url).href
+}
+
+export const getImageURLFromLanding = name => {
+  return new URL(`../assets/img/landing/${name}`, import.meta.url).href
+}
+
 export const getLink = link => {
   var linkToAttribute = '#'
 
@@ -108,4 +118,37 @@ export const getLink = link => {
       linkToAttribute = '#'
   }
   return linkToAttribute
+}
+
+export const FORM_TARGET_ID = 'form_contacto'
+
+export function scrollToForm({ offset = 0, duration = 1000 } = {}) {
+  const el = document.getElementById(FORM_TARGET_ID)
+  if (!el) return
+
+  const targetY = el.getBoundingClientRect().top + window.scrollY - offset
+  const startY = window.scrollY
+  const distance = targetY - startY
+  let startTime = null
+
+  function animation(currentTime) {
+    if (!startTime) startTime = currentTime
+
+    const timeElapsed = currentTime - startTime
+    const progress = Math.min(timeElapsed / duration, 1)
+
+    // Easing para que sea más suave (easeInOutQuad)
+    const ease =
+      progress < 0.5
+        ? 2 * progress * progress
+        : -1 + (4 - 2 * progress) * progress
+
+    window.scrollTo(0, startY + distance * ease)
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animation)
+    }
+  }
+
+  requestAnimationFrame(animation)
 }
