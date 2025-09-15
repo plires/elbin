@@ -3,13 +3,12 @@ import { Formik, Field, Form, ErrorMessage } from 'formik'
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 import ErrorInput from '@/components/commons/ErrorInput'
 import axios from 'axios'
-import { ToastContainer, toast } from 'react-toastify'
+import { toast } from 'react-toastify'
 import Loader from '@/components/commons/Loader'
 
 import CardFeature from '@/components/home/CardFeature'
 import { getContactos, validation } from '@/utils/dataUtils.js'
 
-import 'react-toastify/dist/ReactToastify.css'
 import styles from './contacto.module.css'
 
 const Contacto = () => {
@@ -68,7 +67,6 @@ const Contacto = () => {
     <>
       {loading && <Loader />}
       <main className={`section_contacto container ${styles.section_contacto}`}>
-        <ToastContainer />
         <div className={`row ${styles.content_form}`}>
           <div className='col-md-12'>
             <h2 className='chillax'>Dejanos tu mensaje</h2>
