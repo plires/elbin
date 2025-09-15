@@ -20,14 +20,20 @@ class RepositorioContactsSQL extends repositorioContacts
       $post = (array) $post;
     }
 
-    if ($post['origin'] === 'Formulario de Unite al equipo') {
+    if ($post['origin'] === 'Formulario de Unite al equipo' || $post['origin'] === 'Formulario de Landing Page') {
       $experiencia_seguros = $post['experiencia_seguros'];
       $experiencia_ventas = $post['experiencia_ventas'];
       $actualmente_trabajando = $post['actualmente_trabajando'];
       $emprendiste = $post['emprendiste'];
       $independiente = $post['independiente'];
+
+      if (isset($post['phoneLinkedin'])) {
+        $phone = $post['phoneLinkedin'];
+      } else {
+        $phone = null;
+      }
+
       $company = null;
-      $phone = null;
       $comments = null;
     } else {
       $experiencia_seguros = null;

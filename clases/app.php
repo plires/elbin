@@ -111,7 +111,7 @@ class App
 
       case 'Contacto Cliente':
         $email['template'] = $this->selectEmailTemplate($post, 'to_client', $destinationEmail);
-        $email['subject'] = 'Nuevo Registro desde site: ' . $_ENV['VITE_NAME_APP'];
+        $email['subject'] = 'Nuevo Registro desde: ' . $post['origin'];
         break;
 
       case 'Contacto Usuario':
@@ -180,6 +180,7 @@ class App
     (isset($post['email'])) ? $email = $post['email'] : $email = null;
     (isset($post['company'])) ? $company = $post['company'] : $company = null;
     (isset($post['phone'])) ? $phone = $post['phone'] : $phone = null;
+    (isset($post['phoneLinkedin'])) ? $phoneLinkedin = $post['phoneLinkedin'] : $phoneLinkedin = null;
     (isset($post['comments'])) ? $comments = $post['comments'] : $comments = null;
     (isset($post['experiencia_seguros'])) ? $experiencia_seguros = $post['experiencia_seguros'] : $experiencia_seguros = null;
     (isset($post['experiencia_ventas'])) ? $experiencia_ventas = $post['experiencia_ventas'] : $experiencia_ventas = null;
@@ -187,7 +188,14 @@ class App
     (isset($post['emprendiste'])) ? $emprendiste = $post['emprendiste'] : $emprendiste = null;
     (isset($post['independiente'])) ? $independiente = $post['independiente'] : $independiente = null;
 
-
+    // Definir el bloque Linkedin condicionalmente
+    $bloqueLinkedin = '';
+    if (!empty($phoneLinkedin)) {
+      $bloqueLinkedin = '
+    <p class="fallback-font" style="margin: 0 0 10px; font-family: \'Montserrat\', sans-serif; font-size: 16px; line-height: 26px; color: #575756; text-align: left; font-weight: 400;">
+        <strong>Linkedin:</strong> ' . htmlspecialchars($phoneLinkedin, ENT_QUOTES, 'UTF-8') . '
+    </p>';
+    }
 
     if (!defined('BASE')) {
       define('BASE', $_ENV['VITE_ROOT']);
@@ -201,6 +209,7 @@ class App
       '{email_user}',
       '{company_user}',
       '{phone_user}',
+      '{bloqueLinkedin}',
       '{comments_user}',
       '{experiencia_seguros_user}',
       '{experiencia_ventas_user}',
@@ -219,6 +228,7 @@ class App
       $email,
       $company,
       $phone,
+      $bloqueLinkedin,
       $comments,
       $experiencia_seguros,
       $experiencia_ventas,
