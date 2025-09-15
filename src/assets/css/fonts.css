@@ -9,6 +9,26 @@
 }
 
 @font-face {
+  font-family: 'Chillax';
+  src:
+    url('./../fonts/Chillax-Medium.woff2') format('woff2'),
+    url('./../fonts/Chillax-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chillax';
+  src:
+    url('./../fonts/Chillax-Semibold.woff2') format('woff2'),
+    url('./../fonts/Chillax-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Montserrat';
   src:
     url('./../fonts/Montserrat-Regular.woff2') format('woff2'),

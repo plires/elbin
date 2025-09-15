@@ -52,9 +52,22 @@ ul {
 }
 
 /* Font Titles */
-.chillax {
+.chillax,
+.chillaxBold {
   font-family: 'Chillax';
   font-weight: bold;
+  font-style: normal;
+}
+
+.chillaxMedium {
+  font-family: 'Chillax';
+  font-weight: 500;
+  font-style: normal;
+}
+
+.chillaxSemiBold {
+  font-family: 'Chillax';
+  font-weight: 600;
   font-style: normal;
 }
 /* Font Titles end */
