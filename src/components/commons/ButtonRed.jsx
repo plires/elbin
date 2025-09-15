@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom'
 import styles from './button-red.module.css'
-const ButtonRed = ({ to, text = 'VER MÁS' }) => {
+const ButtonRed = ({ className = '', to, text = 'VER MÁS' }) => {
   return (
-    <Link to={to} className={`btn transition ${styles.btn_red}`}>
+    <Link
+      data-aos='fade-up'
+      to={to}
+      className={`btn transition ${styles.btn_red} ${className}`}
+    >
       {text}
     </Link>
   )
