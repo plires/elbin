@@ -18,7 +18,7 @@ import linkedinWhite from '@/assets/img/linkedin-white.svg'
 
 import './header.css'
 
-const Header = () => {
+const Header = ({ special }) => {
   const [iconMobile, setIconMobile] = useState(bars)
   const [isNavMobileVisible, setIsNavMobileVisible] = useState(false)
   const [logo, setLogo] = useState(logoElbinLarge)
@@ -93,7 +93,10 @@ const Header = () => {
   }, [isNavMobileVisible])
 
   return (
-    <header className='transition' ref={headerElement}>
+    <header
+      className={special ? 'transition specialHeader' : 'transition'}
+      ref={headerElement}
+    >
       <div className={`content`}>
         <NavLink activeclassname='active' className='transition' to='/'>
           <img
@@ -103,132 +106,129 @@ const Header = () => {
           />
         </NavLink>
 
-        <span className={`transition btn_nav_mobile`} onClick={toogleNavBar}>
-          <img
-            className={`transition nav_mobile`}
-            src={iconMobile}
-            alt='nav bars mobile'
-          />
-        </span>
+        {!special && (
+          <>
+            <span
+              className={`transition btn_nav_mobile`}
+              onClick={toogleNavBar}
+            >
+              <img
+                className={`transition nav_mobile`}
+                src={iconMobile}
+                alt='nav bars mobile'
+              />
+            </span>
 
-        <div
-          className={
-            isNavMobileVisible && screen.width < 992
-              ? `transition open nav_rrss`
-              : `transition nav_rrss`
-          }
-        >
-          <nav>
-            <ul>
-              <li>
-                <NavLink
-                  onClick={() => closeAll()}
-                  activeclassname='active'
-                  className='transition'
-                  to='/'
-                >
-                  HOME
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  onClick={() => closeAll()}
-                  activeclassname='active'
-                  className='transition'
-                  to='/about'
-                >
-                  SOBRE ELBIN
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  onClick={() => closeAll()}
-                  activeclassname='active'
-                  className='transition'
-                  to='/seguros'
-                >
-                  SEGUROS
-                </NavLink>
-              </li>
-              {/* <li>
-                <NavLink
-                  onClick={() => closeAll()}
-                  activeclassname='active'
-                  className='transition'
-                  to='/notas'
-                >
-                  NOTAS
-                </NavLink>
-              </li> */}
-              <li>
-                <NavLink
-                  onClick={() => closeAll()}
-                  activeclassname='active'
-                  className='transition'
-                  to='/unite'
-                >
-                  UNITE AL EQUIPO
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  onClick={() => closeAll()}
-                  activeclassname='active'
-                  className='transition'
-                  to='/contacto'
-                >
-                  CONTACTO
-                </NavLink>
-              </li>
-            </ul>
-          </nav>
+            <div
+              className={
+                isNavMobileVisible && screen.width < 992
+                  ? `transition open nav_rrss`
+                  : `transition nav_rrss`
+              }
+            >
+              <nav>
+                <ul>
+                  <li>
+                    <NavLink
+                      onClick={() => closeAll()}
+                      activeclassname='active'
+                      className='transition'
+                      to='/'
+                    >
+                      HOME
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      onClick={() => closeAll()}
+                      activeclassname='active'
+                      className='transition'
+                      to='/about'
+                    >
+                      SOBRE ELBIN
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      onClick={() => closeAll()}
+                      activeclassname='active'
+                      className='transition'
+                      to='/seguros'
+                    >
+                      SEGUROS
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      onClick={() => closeAll()}
+                      activeclassname='active'
+                      className='transition'
+                      to='/unite'
+                    >
+                      UNITE AL EQUIPO
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      onClick={() => closeAll()}
+                      activeclassname='active'
+                      className='transition'
+                      to='/contacto'
+                    >
+                      CONTACTO
+                    </NavLink>
+                  </li>
+                </ul>
+              </nav>
 
-          <ul className={`rrss`}>
-            <li>
-              <a
-                className='transition'
-                rel='noopener'
-                target='_blank'
-                href={import.meta.env.VITE_LINKEDIN}
-              >
-                <img
-                  className='linkedin transition'
-                  src={linkedin}
-                  alt='linkedin elbin'
-                />
-              </a>
-            </li>
+              <ul className={`rrss`}>
+                <li>
+                  <a
+                    className='transition'
+                    rel='noopener'
+                    target='_blank'
+                    href={import.meta.env.VITE_LINKEDIN}
+                  >
+                    <img
+                      className='linkedin transition'
+                      src={linkedin}
+                      alt='linkedin elbin'
+                    />
+                  </a>
+                </li>
 
-            <li>
-              <a
-                className='transition'
-                rel='noopener'
-                target='_blank'
-                href={import.meta.env.VITE_INSTAGRAM}
-              >
-                <img
-                  className='instagram transition'
-                  src={instagram}
-                  alt='instagram elbin'
-                />
-              </a>
-            </li>
-            <li>
-              <a
-                className='transition'
-                rel='noopener'
-                target='_blank'
-                href={import.meta.env.VITE_FACEBOOK}
-              >
-                <img
-                  className='facebook transition'
-                  src={facebook}
-                  alt='facebook elbin'
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
+                <li>
+                  <a
+                    className='transition'
+                    rel='noopener'
+                    target='_blank'
+                    href={import.meta.env.VITE_INSTAGRAM}
+                  >
+                    <img
+                      className='instagram transition'
+                      src={instagram}
+                      alt='instagram elbin'
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className='transition'
+                    rel='noopener'
+                    target='_blank'
+                    href={import.meta.env.VITE_FACEBOOK}
+                  >
+                    <img
+                      className='facebook transition'
+                      src={facebook}
+                      alt='facebook elbin'
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </>
+        )}
       </div>
     </header>
   )
