@@ -29,6 +29,7 @@ dist-ssr
 
 **/fonts
 **/img
+**/pdf
 **/favicons
 **/node_modules
 **/descargas
