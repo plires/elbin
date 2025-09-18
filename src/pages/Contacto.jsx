@@ -31,18 +31,34 @@ const Contacto = () => {
       )
 
       const myJson = JSON.stringify(res.data)
-      const responseData = JSON.parse(myJson)
+      const data = JSON.parse(myJson)
 
-      if (responseData.success) {
-        toast.success(responseData.msg_success)
-        resetForm()
-      } else {
-        responseData.errors.map(error => {
-          return toast.error(error)
+      // Convierte errors a una LISTA segura para poder mapear
+      const errorList = Array.isArray(data?.errors)
+        ? data.errors
+        : Object.entries(data?.errors ?? {}).map(([field, message]) => ({
+            field,
+            message,
+          }))
+
+      if (errorList.length > 0) {
+        // ahora sí podés mapear sin explotar
+        errorList.forEach(({ field, message }) => {
+          toast.error(`${field}: ${message}`)
         })
+
+        setSubmitting(false)
+        setLoading(false)
+        setWordBtn(wordBtn)
+
+        return // cortás el flujo de éxito
+      }
+
+      if (data.success) {
+        toast.success(data.msg_success)
+        resetForm()
       }
     } catch (error) {
-      console.log(error)
       // Realizar acciones en caso de error
       toast.error(
         'Aparentemente en este momento no hay conexión con el servidor, por favor intente mas tarde.',

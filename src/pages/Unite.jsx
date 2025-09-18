@@ -44,10 +44,31 @@ const Unite = ({
       )
 
       const myJson = JSON.stringify(res.data)
-      const responseData = JSON.parse(myJson)
+      const data = JSON.parse(myJson)
 
-      if (responseData.success) {
-        toast.success(responseData.msg_success)
+      // Convierte errors a una LISTA segura para poder mapear
+      const errorList = Array.isArray(data?.errors)
+        ? data.errors
+        : Object.entries(data?.errors ?? {}).map(([field, message]) => ({
+            field,
+            message,
+          }))
+
+      if (errorList.length > 0) {
+        // ahora sí podés mapear sin explotar
+        errorList.forEach(({ field, message }) => {
+          toast.error(`${field}: ${message}`)
+        })
+
+        setSubmitting(false)
+        setLoading(false)
+        setWordBtn(textBTN)
+
+        return // cortás el flujo de éxito
+      }
+
+      if (data.success) {
+        toast.success(data.msg_success)
 
         // 🔹 Si es landing, habilitamos el PDF
         if (type === 'landing') {
@@ -55,13 +76,8 @@ const Unite = ({
         }
 
         resetForm()
-      } else {
-        responseData.errors.map(error => {
-          return toast.error(error)
-        })
       }
     } catch (error) {
-      console.log(error)
       // Realizar acciones en caso de error
       toast.error(
         'Aparentemente en este momento no hay conexión con el servidor, por favor intente mas tarde.',
@@ -77,7 +93,7 @@ const Unite = ({
   const initFormDefault = {
     name: '',
     email: '',
-    phoneLinkedin: '',
+    phone_linkedin: '',
     experiencia_seguros: '',
     experiencia_ventas: '',
     actualmente_trabajando: '',
@@ -174,15 +190,15 @@ const Unite = ({
                     {type === 'landing' && (
                       <div className='mb-3'>
                         <Field
-                          id='phoneLinkedin'
+                          id='phone_linkedin'
                           className='form-control'
                           type='text'
-                          name='phoneLinkedin'
+                          name='phone_linkedin'
                           placeholder='Teléfono / Linkedin (opcional)'
-                          aria-describedby='phoneLinkedinHelp'
+                          aria-describedby='phone_linkedinHelp'
                         />
                         <ErrorMessage
-                          name='phoneLinkedin'
+                          name='phone_linkedin'
                           component={ErrorInput}
                         />
                       </div>
