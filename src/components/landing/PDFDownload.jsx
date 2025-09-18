@@ -1,5 +1,5 @@
 import { useEffect, useCallback } from 'react'
-import recurso from '@/assets/pdf/recurso.pdf'
+import recurso from '@/assets/pdf/guia-mercado-asegurador-elbin.pdf'
 import styles from './pdf-download.module.css'
 
 const PDFDownload = ({ onClose }) => {
@@ -51,12 +51,17 @@ const PDFDownload = ({ onClose }) => {
         </h3>
 
         <p>
-          En breve nos contactaremos con vos. <br /> Mientras tanto, te
-          regalamos un recurso en PDF para que puedas descargar.
+          En breve recibirás un whatsapp o llamado nuestro para contarte cómo
+          sigue tu proceso. Mientras tanto, podés descargar nuestra guía
+          exclusiva para conocer el mercado asegurador.
         </p>
 
-        <a className={styles.downloadBtn} href={recurso} download='recurso.pdf'>
-          DESCARGAR PDF
+        <a
+          className={styles.downloadBtn}
+          href={recurso}
+          download='guia-mercado-asegurador-elbin.pdf'
+        >
+          DESCARGÁ LA GUÍA
         </a>
 
         <p className={styles.helperText}>
