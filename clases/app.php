@@ -1,65 +1,132 @@
 <?php
+
+declare(strict_types=1);
 require_once(__DIR__ . '/../vendor/autoload.php');
 
 use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\SMTP;
-// use PHPMailer\PHPMailer\Exception;
+
 
 class App
 {
 
-  public function validEmail($email)
-  {
-    $mail_valid = 0;
-    //compruebo unas cosas primeras 
-    if ((strlen($email) >= 6) && (substr_count($email, "@") == 1) && (substr($email, 0, 1) != "@") && (substr($email, strlen($email) - 1, 1) != "@")) {
-      if ((!strstr($email, "'")) && (!strstr($email, "\"")) && (!strstr($email, "\\")) && (!strstr($email, "\$")) && (!strstr($email, " "))) {
-        //miro si tiene caracter . 
-        if (substr_count($email, ".") >= 1) {
-          //obtengo la terminacion del dominio 
-          $term_dom = substr(strrchr($email, '.'), 1);
-          //compruebo que la terminaci&oacute;n del dominio sea correcta 
-          if (strlen($term_dom) > 1 && strlen($term_dom) < 5 && (!strstr($term_dom, "@"))) {
-            //compruebo que lo de antes del dominio sea correcto 
-            $before_dom = substr($email, 0, strlen($email) - strlen($term_dom) - 1);
-            $caracter_ult = substr($before_dom, strlen($before_dom) - 1, 1);
-            if ($caracter_ult != "@" && $caracter_ult != ".") {
-              $mail_valid = 1;
-            }
-          }
-        }
-      }
-    }
-    if ($mail_valid)
-      return 1;
-    else
-      return 0;
-  }
+  public const ORIGIN_UNITE   = 'Formulario de Unite al equipo';
+  public const ORIGIN_CONTACT = 'Formulario de Contacto';
+  public const ORIGIN_LP      = 'Formulario de Landing Page';
 
-  public function emptyField($data)
+  /**
+   * Valida el formulario según el origin.
+   * @param bool $recaptchaOk  Resultado de verifyRecaptcha (true si es válido)
+   * @param array|object $post Datos del formulario (puede venir como stdClass)
+   * @return array<string,string> Mapa campo => mensaje de error
+   */
+  public function validateForm(bool $recaptchaOk, array|object $post): array
   {
-    if ($data == '') {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  public function validateForm($recaptcha, $require)
-  {
-
     $errors = [];
 
-    // Verificamos si hay errores en el formulario
-    if (!$recaptcha['success']) {
-      array_push($errors, 'Error Recaptcha, volvé a intentar el envio por favor.');
+    // 1) Normalizar payload
+    $data   = $this->normalizePost($post); // asume que existe en tu clase
+    $origin = $data['origin'] ?? '';
+
+    // 2) reCAPTCHA
+    if ($recaptchaOk !== true) {
+      $errors['recaptcha'] = 'No pudimos verificar que seas humano. Intenta nuevamente.';
     }
 
-    if (!$this->validEmail($require->email)) {
-      array_push($errors, 'Ingresá un email válido.');
+    // 3) Reglas por origin (lista blanca)
+    $fieldsUnite = [
+      'name',
+      'email',
+      'experiencia_seguros',
+      'experiencia_ventas',
+      'actualmente_trabajando',
+      'emprendiste',
+      'independiente',
+    ];
+
+    $camposConocidos = [
+      'Formulario de Unite al equipo' => $fieldsUnite,
+      'Formulario de Contacto'        => ['name', 'email', 'phone', 'comments'],
+      // Landing = mismos que Unite + phone_linkedin (opcional)
+      'Formulario de Landing Page'    => array_merge($fieldsUnite, ['phone_linkedin']),
+    ];
+
+    // Campos opcionales por origin
+    $opcionales = [
+      'Formulario de Landing Page' => ['phone_linkedin'],
+    ];
+
+    // 4) Validar origin
+    $validOrigins = array_keys($camposConocidos);
+    if (!in_array($origin, $validOrigins, true)) {
+      $errors['origin'] = 'Origen de formulario inválido o ausente.';
+      return $errors;
+    }
+
+    // 5) Requeridos = conocidos - opcionales
+    $known    = $camposConocidos[$origin];
+    $required = array_values(array_diff($known, $opcionales[$origin] ?? []));
+
+    // 6) Validar vacíos solo sobre los requeridos
+    foreach ($required as $campo) {
+      $valor = $data[$campo] ?? null;
+      if ($this->isBlank($valor)) { // asume helper existente
+        $errors[$campo] = 'Este campo es obligatorio.';
+      }
+    }
+
+    // 7) Email válido (aplica a los tres origins)
+    $email = $data['email'] ?? null;
+    if ($this->isBlank($email)) {
+      $errors['email'] = 'El email es obligatorio.';
+    } elseif (!$this->isValidEmail((string)$email)) { // asume helper existente
+      $errors['email'] = 'Ingresá un correo válido.';
     }
 
     return $errors;
+  }
+
+
+  // ----------------- Helpers privados -----------------
+
+  /**
+   * Normaliza $post (array|object) a array asociativo con strings "trimeadas" cuando apliquen.
+   */
+  private function normalizePost(array|object $post): array
+  {
+    $arr = is_array($post) ? $post : get_object_vars($post);
+    $out = [];
+
+    foreach ($arr as $k => $v) {
+      // Si es escalar, casteamos a string y trim; si es array/obj, lo dejamos tal cual (podrías serializar/ignorar según tu caso)
+      if (is_string($v)) {
+        $out[$k] = trim($v);
+      } elseif (is_scalar($v)) {
+        $out[$k] = (string)$v;
+      } else {
+        $out[$k] = $v;
+      }
+    }
+    return $out;
+  }
+
+  /**
+   * True si $value es null, '' o solo espacios
+   */
+  private function isBlank(mixed $value): bool
+  {
+    if ($value === null) return true;
+    if (is_string($value)) return trim($value) === '';
+    // Para arrays/objetos: consideralos vacíos solo si están vacíos
+    if (is_array($value)) return count($value) === 0;
+    return $value === '';
+  }
+
+  /**
+   * Valida formato general de email (RFC práctico).
+   */
+  private function isValidEmail(string $email): bool
+  {
+    return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
   }
 
   public function verifyRecaptcha($token)
@@ -173,29 +240,40 @@ class App
     return $send;
   }
 
+  private function renderOptionalField(string $label, mixed $value): string
+  {
+    // normaliza a string y valida vacío
+    if ($value === null) return '';
+    if (is_string($value)) {
+      $value = trim($value);
+    } elseif (is_scalar($value)) {
+      $value = (string)$value;
+    } else {
+      return ''; // no mostramos arrays/objetos
+    }
+    if ($value === '') return '';
+
+    $escaped = htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
+
+    return <<<HTML
+      <p class="fallback-font" style="margin: 0 0 10px; font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 26px; color: #575756; text-align: left; font-weight: 400;">
+          <strong>{$label}:</strong> {$escaped}
+      </p>
+      HTML;
+  }
+
   function selectEmailTemplate($post, $to, $destinationEmail)
   {
 
-    (isset($post['name'])) ? $name = $post['name'] : $name = null;
-    (isset($post['email'])) ? $email = $post['email'] : $email = null;
-    (isset($post['company'])) ? $company = $post['company'] : $company = null;
-    (isset($post['phone'])) ? $phone = $post['phone'] : $phone = null;
-    (isset($post['phoneLinkedin'])) ? $phoneLinkedin = $post['phoneLinkedin'] : $phoneLinkedin = null;
-    (isset($post['comments'])) ? $comments = $post['comments'] : $comments = null;
-    (isset($post['experiencia_seguros'])) ? $experiencia_seguros = $post['experiencia_seguros'] : $experiencia_seguros = null;
-    (isset($post['experiencia_ventas'])) ? $experiencia_ventas = $post['experiencia_ventas'] : $experiencia_ventas = null;
-    (isset($post['actualmente_trabajando'])) ? $actualmente_trabajando = $post['actualmente_trabajando'] : $actualmente_trabajando = null;
-    (isset($post['emprendiste'])) ? $emprendiste = $post['emprendiste'] : $emprendiste = null;
-    (isset($post['independiente'])) ? $independiente = $post['independiente'] : $independiente = null;
-
-    // Definir el bloque Linkedin condicionalmente
-    $bloqueLinkedin = '';
-    if (!empty($phoneLinkedin)) {
-      $bloqueLinkedin = '
-    <p class="fallback-font" style="margin: 0 0 10px; font-family: \'Montserrat\', sans-serif; font-size: 16px; line-height: 26px; color: #575756; text-align: left; font-weight: 400;">
-        <strong>Linkedin:</strong> ' . htmlspecialchars($phoneLinkedin, ENT_QUOTES, 'UTF-8') . '
-    </p>';
-    }
+    $bloqueCompany = $this->renderOptionalField('Compañia', $post['company'] ?? null);
+    $bloquePhone = $this->renderOptionalField('Telefono', $post['phone'] ?? null);
+    $bloqueLinkedin = $this->renderOptionalField('Linkedin / Telefono', $post['phone_linkedin'] ?? null);
+    $bloqueComments = $this->renderOptionalField('Comentarios', $post['comments'] ?? null);
+    $bloqueExperienciaSeguros = $this->renderOptionalField('Experiencia en Seguros', $post['experiencia_seguros'] ?? null);
+    $bloqueExperienciaVentas = $this->renderOptionalField('Experiencia en ventas intagibles', $post['experiencia_ventas'] ?? null);
+    $bloqueActualmenteTrabajando = $this->renderOptionalField('¿Actualmente estas trabajando?', $post['actualmente_trabajando'] ?? null);
+    $bloqueEmprendiste = $this->renderOptionalField('¿Alguna vez emprendiste?', $post['emprendiste'] ?? null);
+    $bloqueIndependiente = $this->renderOptionalField('¿Te interesa un desarrollo profesional independiente?', $post['independiente'] ?? null);
 
     if (!defined('BASE')) {
       define('BASE', $_ENV['VITE_ROOT']);
@@ -207,15 +285,15 @@ class App
       '{email_client}',
       '{name_user}',
       '{email_user}',
-      '{company_user}',
-      '{phone_user}',
+      '{bloqueCompany}',
+      '{bloquePhone}',
       '{bloqueLinkedin}',
-      '{comments_user}',
-      '{experiencia_seguros_user}',
-      '{experiencia_ventas_user}',
-      '{actualmente_trabajando_user}',
-      '{emprendiste_user}',
-      '{independiente_user}',
+      '{bloqueComments}',
+      '{bloqueExperienciaSeguros}',
+      '{bloqueExperienciaVentas}',
+      '{bloqueActualmenteTrabajando}',
+      '{bloqueEmprendiste}',
+      '{bloqueIndependiente}',
       '{origin}',
       '{date}',
       '{base}'
@@ -224,17 +302,17 @@ class App
     $values = array(
       $_ENV['VITE_NAME_APP'],
       $_ENV['VITE_EMAIL_RECIPENT'],
-      $name,
-      $email,
-      $company,
-      $phone,
+      $post['name'],
+      $post['email'],
+      $bloqueCompany,
+      $bloquePhone,
       $bloqueLinkedin,
-      $comments,
-      $experiencia_seguros,
-      $experiencia_ventas,
-      $actualmente_trabajando,
-      $emprendiste,
-      $independiente,
+      $bloqueComments,
+      $bloqueExperienciaSeguros,
+      $bloqueExperienciaVentas,
+      $bloqueActualmenteTrabajando,
+      $bloqueEmprendiste,
+      $bloqueIndependiente,
       $post['origin'],
       date('d-m-Y'),
       BASE
