@@ -365,47 +365,15 @@
             <strong>Email:</strong> {email_user}
           </p>
 
+          {bloqueCompany}
+          {bloquePhone}
           {bloqueLinkedin}
-
-          <p class="fallback-font" style="margin: 0 0 10px; font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 26px; color: #575756; text-align: left; font-weight: 400;">
-            <strong>Empresa:</strong> {company_user}
-          </p>
-
-          <p class="fallback-font" style="margin: 0 0 10px; font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 26px; color: #575756; text-align: left; font-weight: 400;">
-            <strong>Teléfono:</strong> {phone_user}
-          </p>
-
-          <p class="fallback-font" style="margin: 0 0 10px; font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 26px; color: #575756; text-align: left; font-weight: 400;">
-            <strong>Mensaje:</strong> {comments_user}
-          </p>
-
-          <br>
-          <hr>
-          <br>
-
-          <p class="fallback-font" style="margin: 0 0 10px; font-family: 'Montserrat', sans-serif; font-size: 18px; line-height: 28px; color: #575756; text-align: left; font-weight: 700;">
-            <strong>Otros datos:</strong>
-          </p>
-
-          <p class="fallback-font" style="margin: 0 0 10px; font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 26px; color: #575756; text-align: left; font-weight: 400;">
-            <strong>Experiencia en Seguros:</strong> {experiencia_seguros_user}
-          </p>
-
-          <p class="fallback-font" style="margin: 0 0 10px; font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 26px; color: #575756; text-align: left; font-weight: 400;">
-            <strong>Experiencia en ventas intagibles:</strong> {experiencia_ventas_user}
-          </p>
-
-          <p class="fallback-font" style="margin: 0 0 10px; font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 26px; color: #575756; text-align: left; font-weight: 400;">
-            <strong>¿Actualmente estas trabajando?</strong> {emprendiste_user}
-          </p>
-
-          <p class="fallback-font" style="margin: 0 0 10px; font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 26px; color: #575756; text-align: left; font-weight: 400;">
-            <strong>¿Alguna vez emprendiste?</strong> {emprendiste_user}
-          </p>
-
-          <p class="fallback-font" style="margin: 0 0 10px; font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 26px; color: #575756; text-align: left; font-weight: 400;">
-            <strong>¿Te interesa un desarrollo profesional independiente?</strong> {independiente_user}
-          </p>
+          {bloqueComments}
+          {bloqueExperienciaSeguros}
+          {bloqueExperienciaVentas}
+          {bloqueActualmenteTrabajando}
+          {bloqueEmprendiste}
+          {bloqueIndependiente}
 
           <p class="fallback-font" style="margin: 0 0 10px; font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 26px; color: #575756; text-align: left; font-weight: 400;">
             <strong>Fecha:</strong> {date}
