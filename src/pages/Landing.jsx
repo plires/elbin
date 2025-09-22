@@ -14,6 +14,7 @@ const Landing = () => {
       <Caracteristicas />
       <CtaLanding />
       <Unite
+        context='landing'
         titleLanding='Aplicá y descubrí si tu perfil califica para <br />unirte a Elbin y hacer carrera en Zurich.'
         type='landing'
         titleForm='Al avanzar en tu aplicación, vas a recibir una <span>guía exclusiva</span> para conocer el mercado asegurador, entender la oportunidad y estar preparado desde el primer día.'

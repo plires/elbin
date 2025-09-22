@@ -37,7 +37,10 @@ const Layout = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/contacto' element={<Contacto />} />
+        <Route
+          path='/contacto'
+          element={<Contacto context='page_contacto' />}
+        />
         <Route path='/notas' element={<Notas />} />
         <Route path='/seguros' element={<Seguros />} />
         <Route path='/landing' element={<Landing />} />
@@ -70,6 +73,7 @@ const Layout = () => {
           path='/unite'
           element={
             <Unite
+              context='page_unite'
               type='default'
               titleForm='A continuación, te pediremos algunos datos personales para poder
               evaluar tu perfil'

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import { Formik, Field, Form, ErrorMessage } from 'formik'
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 import ErrorInput from '@/components/commons/ErrorInput'
@@ -11,7 +12,9 @@ import { getContactos, validation } from '@/utils/dataUtils.js'
 
 import styles from './contacto.module.css'
 
-const Contacto = () => {
+const Contacto = ({ context = 'no_set' }) => {
+  const { pathname } = useLocation()
+
   const data = getContactos('contactos')
   const [loading, setLoading] = useState(false)
   const [wordBtn, setWordBtn] = useState('ENVIAR')
@@ -56,6 +59,14 @@ const Contacto = () => {
 
       if (data.success) {
         toast.success(data.msg_success)
+        window.dataLayer = window.dataLayer || []
+        window.dataLayer.push({
+          event: 'form_sent',
+          form_id: 'form_contacto',
+          form_context: context || pathname, // ej: "/unite" o "landing"
+          page_path: pathname, // ej: https://elbin.com.ar/landing
+          page_title: document.title, // El titulo de la pagina
+        })
         resetForm()
       }
     } catch (error) {
