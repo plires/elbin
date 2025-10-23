@@ -36,23 +36,23 @@ class App
     $fieldsUnite = [
       'name',
       'email',
-      'experiencia_seguros',
-      'experiencia_ventas',
-      'actualmente_trabajando',
-      'emprendiste',
-      'independiente',
+      'phone',
+      'city',
+      'ageRange',
+      'activity',
+      'experience',
+      'experiencia_asesorando',
     ];
 
     $camposConocidos = [
       'Formulario de Unite al equipo' => $fieldsUnite,
       'Formulario de Contacto'        => ['name', 'email', 'phone', 'comments'],
-      // Landing = mismos que Unite + phone_linkedin (opcional)
-      'Formulario de Landing Page'    => array_merge($fieldsUnite, ['phone_linkedin']),
+      'Formulario de Landing Page'    => $fieldsUnite,
     ];
 
     // Campos opcionales por origin
     $opcionales = [
-      'Formulario de Landing Page' => ['phone_linkedin'],
+      'Formulario de Landing Page' => [],
     ];
 
     // 4) Validar origin
@@ -266,14 +266,12 @@ class App
   {
 
     $bloqueCompany = $this->renderOptionalField('Compañia', $post['company'] ?? null);
-    $bloquePhone = $this->renderOptionalField('Telefono', $post['phone'] ?? null);
-    $bloqueLinkedin = $this->renderOptionalField('Linkedin / Telefono', $post['phone_linkedin'] ?? null);
     $bloqueComments = $this->renderOptionalField('Comentarios', $post['comments'] ?? null);
-    $bloqueExperienciaSeguros = $this->renderOptionalField('Experiencia en Seguros', $post['experiencia_seguros'] ?? null);
-    $bloqueExperienciaVentas = $this->renderOptionalField('Experiencia en ventas intagibles', $post['experiencia_ventas'] ?? null);
-    $bloqueActualmenteTrabajando = $this->renderOptionalField('¿Actualmente estas trabajando?', $post['actualmente_trabajando'] ?? null);
-    $bloqueEmprendiste = $this->renderOptionalField('¿Alguna vez emprendiste?', $post['emprendiste'] ?? null);
-    $bloqueIndependiente = $this->renderOptionalField('¿Te interesa un desarrollo profesional independiente?', $post['independiente'] ?? null);
+    $bloqueCity = $this->renderOptionalField('Ciudad', $post['city'] ?? null);
+    $bloqueAgeRange = $this->renderOptionalField('Rango de Edad', $post['ageRange'] ?? null);
+    $bloqueActivity = $this->renderOptionalField('Actividad Actual', $post['activity'] ?? null);
+    $bloqueExperience = $this->renderOptionalField('Experiencia Previa', $post['experience'] ?? null);
+    $bloqueExperienciaAsesorando = $this->renderOptionalField('Experiencia asesorando', $post['experienciaAsesorando'] ?? null);
 
     if (!defined('BASE')) {
       define('BASE', $_ENV['VITE_ROOT']);
@@ -285,15 +283,14 @@ class App
       '{email_client}',
       '{name_user}',
       '{email_user}',
+      '{phone_user}',
       '{bloqueCompany}',
-      '{bloquePhone}',
-      '{bloqueLinkedin}',
       '{bloqueComments}',
-      '{bloqueExperienciaSeguros}',
-      '{bloqueExperienciaVentas}',
-      '{bloqueActualmenteTrabajando}',
-      '{bloqueEmprendiste}',
-      '{bloqueIndependiente}',
+      '{bloqueCity}',
+      '{bloqueAgeRange}',
+      '{bloqueActivity}',
+      '{bloqueExperience}',
+      '{bloqueExperienciaAsesorando}',
       '{origin}',
       '{date}',
       '{base}'
@@ -304,15 +301,14 @@ class App
       $_ENV['VITE_EMAIL_RECIPENT'],
       $post['name'],
       $post['email'],
+      $post['phone'],
       $bloqueCompany,
-      $bloquePhone,
-      $bloqueLinkedin,
       $bloqueComments,
-      $bloqueExperienciaSeguros,
-      $bloqueExperienciaVentas,
-      $bloqueActualmenteTrabajando,
-      $bloqueEmprendiste,
-      $bloqueIndependiente,
+      $bloqueCity,
+      $bloqueAgeRange,
+      $bloqueActivity,
+      $bloqueExperience,
+      $bloqueExperienciaAsesorando,
       $post['origin'],
       date('d-m-Y'),
       BASE

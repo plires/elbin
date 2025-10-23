@@ -63,30 +63,35 @@ export const validationUnite = values => {
   if (!values.name) {
     errors.name = 'Ingresá un nombre'
   }
+
   if (!values.email) {
     errors.email = 'Ingresá tu email'
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
     errors.email = 'Ingresá un correo válido'
   }
 
-  if (!values.emprendiste) {
-    errors.emprendiste = 'Elegí una opción'
+  if (!values.phone) {
+    errors.phone = 'Ingresá un teléfono'
   }
 
-  if (!values.experiencia_seguros) {
-    errors.experiencia_seguros = 'Elegí una opción'
+  if (!values.city) {
+    errors.city = 'Ingresá tu ciudad'
   }
 
-  if (!values.actualmente_trabajando) {
-    errors.actualmente_trabajando = 'Elegí una opción'
+  if (!values.ageRange) {
+    errors.ageRange = 'Ingresá tu rango de edad'
   }
 
-  if (!values.experiencia_ventas) {
-    errors.experiencia_ventas = 'Elegí una opción'
+  if (!values.activity) {
+    errors.activity = 'Ingresá tu actividad actual'
   }
 
-  if (!values.independiente) {
-    errors.independiente = 'Elegí una opción'
+  if (!values.experience) {
+    errors.experience = 'Ingresá tu experiencia previa'
+  }
+
+  if (!values.experiencia_asesorando) {
+    errors.experiencia_asesorando = 'Elegí una opción'
   }
 
   return errors

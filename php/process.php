@@ -29,18 +29,16 @@ $post = new stdClass();
 (isset($require->email)) ? $post->email = $require->email : $post->email = null;
 (isset($require->company)) ? $post->company = $require->company : $post->company = null;
 (isset($require->phone)) ? $post->phone = $require->phone : $post->phone = null;
-(isset($require->phone_linkedin)) ? $post->phone_linkedin = $require->phone_linkedin : $post->phone_linkedin = null;
 (isset($require->comments)) ? $post->comments = $require->comments : $post->comments = null;
 (isset($require->origin)) ? $post->origin = $require->origin : $post->origin = null;
-(isset($require->experiencia_seguros)) ? $post->experiencia_seguros = $require->experiencia_seguros : $post->experiencia_seguros = null;
-(isset($require->experiencia_ventas)) ? $post->experiencia_ventas = $require->experiencia_ventas : $post->experiencia_ventas = null;
-(isset($require->actualmente_trabajando)) ? $post->actualmente_trabajando = $require->actualmente_trabajando : $post->actualmente_trabajando = null;
-(isset($require->emprendiste)) ? $post->emprendiste = $require->emprendiste : $post->emprendiste = null;
-(isset($require->independiente)) ? $post->independiente = $require->independiente : $post->independiente = null;
+(isset($require->city)) ? $post->city = $require->city : $post->city = null;
+(isset($require->ageRange)) ? $post->ageRange = $require->ageRange : $post->ageRange = null;
+(isset($require->activity)) ? $post->activity = $require->activity : $post->activity = null;
+(isset($require->experience)) ? $post->experience = $require->experience : $post->experience = null;
+(isset($require->experiencia_asesorando)) ? $post->experiencia_asesorando = $require->experiencia_asesorando : $post->experiencia_asesorando = null;
 
 if ($post->company === '') $post->company = null; // lo hacemos null si viene vacio
 if ($post->phone === '') $post->phone = null; // lo hacemos null si viene vacio
-if ($post->phone_linkedin === '') $post->phone_linkedin = null; // lo hacemos null si viene vacio
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->safeLoad();

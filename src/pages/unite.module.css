@@ -103,11 +103,13 @@
   font-weight: 700;
 }
 
-.section_unite_landing :global(.form-control::placeholder) {
+.section_unite_landing :global(.form-control::placeholder),
+.section_unite_landing :global(.form-select) {
   color: var(--third-color);
 }
 
-.section_unite_landing :global(.form-control) {
+.section_unite_landing :global(.form-control),
+.section_unite_landing :global(.form-select) {
   border: solid 1px var(--primary-color);
 }
 

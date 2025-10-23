@@ -372,15 +372,17 @@
             <strong>Email:</strong> {email_user}
           </p>
 
+          <p class="fallback-font" style="margin: 0 0 10px; font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 26px; color: #575756; text-align: left; font-weight: 400;">
+            <strong>Teléfono:</strong> {phone_user}
+          </p>
+
           {bloqueCompany}
-          {bloquePhone}
-          {bloqueLinkedin}
           {bloqueComments}
-          {bloqueExperienciaSeguros}
-          {bloqueExperienciaVentas}
-          {bloqueActualmenteTrabajando}
-          {bloqueEmprendiste}
-          {bloqueIndependiente}
+          {bloqueCity}
+          {bloqueAgeRange}
+          {bloqueActivity}
+          {bloqueExperience}
+          {bloqueExperienciaAsesorando}
 
           <p class="fallback-font" style="margin: 0 0 10px; font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 26px; color: #575756; text-align: left; font-weight: 400;">
             <strong>Fecha:</strong> {date}

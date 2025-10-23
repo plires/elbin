@@ -90,7 +90,8 @@ ul {
 /* Seguros Page end */
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   box-shadow: none !important;
 }
 

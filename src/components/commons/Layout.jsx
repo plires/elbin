@@ -1,4 +1,3 @@
-import { useLocation } from 'react-router-dom'
 import { Routes, Route } from 'react-router-dom'
 import { ToastContainer, Zoom } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -19,14 +18,13 @@ import SegurosCorporativosContinuidadSocietaria from '@/pages/subpages/SegurosCo
 import SegurosCorporativosCapitalizacion from '@/pages/subpages/SegurosCorporativosCapitalizacion'
 import SegurosCorporativosGenerales from '@/pages/subpages/SegurosCorporativosGenerales'
 
-import Unite from '@/pages/Unite'
+// import Unite from '@/pages/Unite'
 import NotFound from '@/pages/NotFound'
 
 const Layout = () => {
-  const location = useLocation()
-
   // Detecta si estás en /landing
-  const isLanding = location.pathname.startsWith('/landing')
+  // const isLanding = location.pathname.startsWith('/landing')
+  const isLanding = false
 
   return (
     <>
@@ -43,7 +41,6 @@ const Layout = () => {
         />
         <Route path='/notas' element={<Notas />} />
         <Route path='/seguros' element={<Seguros />} />
-        <Route path='/landing' element={<Landing />} />
         <Route
           path='/seguros/personales/capitalizacion'
           element={<SegurosPersonalesCapitalizacion />}
@@ -69,23 +66,7 @@ const Layout = () => {
           path='/seguros/corporativos/generales'
           element={<SegurosCorporativosGenerales />}
         />
-        <Route
-          path='/unite'
-          element={
-            <Unite
-              context='page_unite'
-              type='default'
-              titleForm='A continuación, te pediremos algunos datos personales para poder
-              evaluar tu perfil'
-              titleAside='¡Sumate al equipo!'
-              descriptionAside='En Elbin nuestro objetivo es transformar la vida de
-                  nuestros/as asesores/as dándoles las mejores herramientas para
-                  crecer en confianza, ganar experiencia y poder desarrollarse
-                  en una profesión que es única.'
-              textBTN='ENVIAR'
-            />
-          }
-        />
+        <Route path='/unite' element={<Landing />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
 

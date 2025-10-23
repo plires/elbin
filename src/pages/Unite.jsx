@@ -106,12 +106,12 @@ const Unite = ({
   const initFormDefault = {
     name: '',
     email: '',
-    phone_linkedin: '',
-    experiencia_seguros: '',
-    experiencia_ventas: '',
-    actualmente_trabajando: '',
-    emprendiste: '',
-    independiente: '',
+    phone: '',
+    city: '',
+    ageRange: '',
+    activity: '',
+    experience: '',
+    experiencia_asesorando: '',
   }
 
   return (
@@ -201,210 +201,123 @@ const Unite = ({
                     </div>
 
                     {type === 'landing' && (
-                      <div className='mb-3'>
-                        <Field
-                          id='phone_linkedin'
-                          className='form-control'
-                          type='text'
-                          name='phone_linkedin'
-                          placeholder='Teléfono / Linkedin (opcional)'
-                          aria-describedby='phone_linkedinHelp'
-                        />
-                        <ErrorMessage
-                          name='phone_linkedin'
-                          component={ErrorInput}
-                        />
-                      </div>
+                      <>
+                        <div className='mb-3'>
+                          <Field
+                            id='phone'
+                            className='form-control'
+                            type='text'
+                            name='phone'
+                            placeholder='Teléfono'
+                            aria-describedby='phoneHelp'
+                          />
+                          <ErrorMessage name='phone' component={ErrorInput} />
+                        </div>
+
+                        <div className='mb-3'>
+                          <Field
+                            id='city'
+                            className='form-control'
+                            type='text'
+                            name='city'
+                            placeholder='Ciudad'
+                            aria-describedby='cityHelp'
+                          />
+                          <ErrorMessage name='city' component={ErrorInput} />
+                        </div>
+
+                        <div className='mb-3'>
+                          <Field
+                            as='select'
+                            id='ageRange'
+                            name='ageRange'
+                            className='form-select'
+                            aria-label='Rango de edad'
+                          >
+                            <option value=''>¿Cuántos años tenés?</option>
+                            <option value='25_a_31_años'>25 a 31 años</option>
+                            <option value='32_a_44_años'>32 a 44 años</option>
+                            <option value='46_a_55_años'>46 a 55 años</option>
+                          </Field>
+
+                          <ErrorMessage
+                            name='ageRange'
+                            component={ErrorInput}
+                          />
+                        </div>
+
+                        <div className='mb-3'>
+                          <Field
+                            id='activity'
+                            className='form-control'
+                            type='text'
+                            name='activity'
+                            placeholder='¿A qué te dedicás actualmente?'
+                            aria-describedby='activityHelp'
+                          />
+                          <ErrorMessage
+                            name='activity'
+                            component={ErrorInput}
+                          />
+                        </div>
+
+                        <div className='mb-3'>
+                          <Field
+                            id='experience'
+                            className='form-control'
+                            type='text'
+                            name='experience'
+                            placeholder='Experiencia previa'
+                            aria-describedby='experienceHelp'
+                          />
+                          <ErrorMessage
+                            name='experience'
+                            component={ErrorInput}
+                          />
+                        </div>
+
+                        <div className={`${styles.content_radios}`}>
+                          <h4>
+                            ¿tenés experiencia asesorando personas en temas
+                            previsionales o financieros?
+                          </h4>
+                          <div className='form-check form-check-inline'>
+                            <label
+                              className='form-check-label'
+                              htmlFor='experiencia_asesorando_si'
+                            >
+                              <Field
+                                id='experiencia_asesorando_si'
+                                name='experiencia_asesorando'
+                                className='form-check-input'
+                                type='radio'
+                                value='si'
+                              />
+                              Si
+                            </label>
+                          </div>
+                          <div className='form-check form-check-inline'>
+                            <label
+                              className='form-check-label'
+                              htmlFor='experiencia_asesorando_no'
+                            >
+                              <Field
+                                id='experiencia_asesorando_no'
+                                name='experiencia_asesorando'
+                                className='form-check-input'
+                                type='radio'
+                                value='no'
+                              />
+                              No
+                            </label>
+                          </div>
+                          <ErrorMessage
+                            name='experiencia_asesorando'
+                            component={ErrorInput}
+                          />
+                        </div>
+                      </>
                     )}
-
-                    <div className={`${styles.content_radios}`}>
-                      <h4>Experiencia en seguros</h4>
-                      <div className='form-check form-check-inline'>
-                        <label
-                          className='form-check-label'
-                          htmlFor='experiencia_seguros_si'
-                        >
-                          <Field
-                            id='experiencia_seguros_si'
-                            name='experiencia_seguros'
-                            className='form-check-input'
-                            type='radio'
-                            value='si'
-                          />
-                          Si
-                        </label>
-                      </div>
-                      <div className='form-check form-check-inline'>
-                        <label
-                          className='form-check-label'
-                          htmlFor='experiencia_seguros_no'
-                        >
-                          <Field
-                            id='experiencia_seguros_no'
-                            name='experiencia_seguros'
-                            className='form-check-input'
-                            type='radio'
-                            value='no'
-                          />
-                          No
-                        </label>
-                      </div>
-                      <ErrorMessage
-                        name='experiencia_seguros'
-                        component={ErrorInput}
-                      />
-                    </div>
-
-                    <div className={`${styles.content_radios}`}>
-                      <h4>Experiencia en ventas intagibles</h4>
-                      <div className='form-check form-check-inline'>
-                        <label
-                          className='form-check-label'
-                          htmlFor='experiencia_ventas_si'
-                        >
-                          <Field
-                            id='experiencia_ventas_si'
-                            name='experiencia_ventas'
-                            className='form-check-input'
-                            type='radio'
-                            value='si'
-                          />
-                          Si
-                        </label>
-                      </div>
-                      <div className='form-check form-check-inline'>
-                        <label
-                          className='form-check-label'
-                          htmlFor='experiencia_ventas_no'
-                        >
-                          <Field
-                            id='experiencia_ventas_no'
-                            name='experiencia_ventas'
-                            className='form-check-input'
-                            type='radio'
-                            value='no'
-                          />
-                          No
-                        </label>
-                      </div>
-                      <ErrorMessage
-                        name='experiencia_ventas'
-                        component={ErrorInput}
-                      />
-                    </div>
-
-                    <div className={`${styles.content_radios}`}>
-                      <h4>¿Actualmente estas trabajando?</h4>
-                      <div className='form-check form-check-inline'>
-                        <label
-                          className='form-check-label'
-                          htmlFor='actualmente_trabajando_si'
-                        >
-                          <Field
-                            id='actualmente_trabajando_si'
-                            name='actualmente_trabajando'
-                            className='form-check-input'
-                            type='radio'
-                            value='si'
-                          />
-                          Si
-                        </label>
-                      </div>
-                      <div className='form-check form-check-inline'>
-                        <label
-                          className='form-check-label'
-                          htmlFor='actualmente_trabajando_no'
-                        >
-                          <Field
-                            id='actualmente_trabajando_no'
-                            name='actualmente_trabajando'
-                            className='form-check-input'
-                            type='radio'
-                            value='no'
-                          />
-                          No
-                        </label>
-                      </div>
-                      <ErrorMessage
-                        name='actualmente_trabajando'
-                        component={ErrorInput}
-                      />
-                    </div>
-
-                    <div className={`${styles.content_radios}`}>
-                      <h4>¿Alguna vez emprendiste?</h4>
-                      <div className='form-check form-check-inline'>
-                        <label
-                          className='form-check-label'
-                          htmlFor='emprendiste_si'
-                        >
-                          <Field
-                            id='emprendiste_si'
-                            name='emprendiste'
-                            className='form-check-input'
-                            type='radio'
-                            value='si'
-                          />
-                          Si
-                        </label>
-                      </div>
-                      <div className='form-check form-check-inline'>
-                        <label
-                          className='form-check-label'
-                          htmlFor='emprendiste_no'
-                        >
-                          No
-                        </label>
-                        <Field
-                          id='emprendiste_no'
-                          name='emprendiste'
-                          className='form-check-input'
-                          type='radio'
-                          value='no'
-                        />
-                      </div>
-                      <ErrorMessage name='emprendiste' component={ErrorInput} />
-                    </div>
-
-                    <div className={`${styles.content_radios}`}>
-                      <h4>
-                        ¿Te interesa un desarrollo profesional independiente?
-                      </h4>
-                      <div className='form-check form-check-inline'>
-                        <label
-                          className='form-check-label'
-                          htmlFor='independiente_si'
-                        >
-                          <Field
-                            id='independiente_si'
-                            name='independiente'
-                            className='form-check-input'
-                            type='radio'
-                            value='si'
-                          />
-                          Si
-                        </label>
-                      </div>
-                      <div className='form-check form-check-inline'>
-                        <label
-                          className='form-check-label'
-                          htmlFor='independiente_no'
-                        >
-                          <Field
-                            id='independiente_no'
-                            name='independiente'
-                            className='form-check-input'
-                            type='radio'
-                            value='no'
-                          />
-                          No
-                        </label>
-                      </div>
-                      <ErrorMessage
-                        name='independiente'
-                        component={ErrorInput}
-                      />
-                    </div>
 
                     <div className={`${styles.content_btn}`}>
                       <button
