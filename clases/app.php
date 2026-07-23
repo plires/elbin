@@ -193,14 +193,22 @@ class App
   public function setServerValuesToSendEmails($objectPhpMailer)
   {
 
-    // $objectPhpMailer->SMTPDebug  = 3;                    
-    $objectPhpMailer->Host       = $_ENV['SMTP'];
-    $objectPhpMailer->SMTPAuth   = true;
-    $objectPhpMailer->Username   = $_ENV['EMAIL_CLIENT'];
-    $objectPhpMailer->Password   = $_ENV['PASSWORD'];
-    $objectPhpMailer->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-    $objectPhpMailer->CharSet    = $_ENV['VITE_EMAIL_CHARSET'];
-    $objectPhpMailer->Port       = $_ENV['EMAIL_PORT'];
+    // $objectPhpMailer->SMTPDebug  = 3;
+    $objectPhpMailer->Host    = $_ENV['SMTP'];
+    $objectPhpMailer->Port    = $_ENV['EMAIL_PORT'];
+    $objectPhpMailer->CharSet = $_ENV['VITE_EMAIL_CHARSET'];
+
+    if ($_ENV['VITE_ENVIRONMENT'] === 'local') {
+      // Mailpit accepts unauthenticated, unencrypted SMTP on its default port.
+      $objectPhpMailer->SMTPAuth   = false;
+      $objectPhpMailer->SMTPSecure = false;
+      $objectPhpMailer->SMTPAutoTLS = false;
+    } else {
+      $objectPhpMailer->SMTPAuth   = true;
+      $objectPhpMailer->Username   = $_ENV['EMAIL_CLIENT'];
+      $objectPhpMailer->Password   = $_ENV['PASSWORD'];
+      $objectPhpMailer->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    }
 
     return $objectPhpMailer;
   }
@@ -220,11 +228,10 @@ class App
     // Setear Template y asunto de los mails
     $email_content = $this->setTemplateAndEmailSubject($template, $post, $destinationEmail);
 
-    if ($_ENV['VITE_ENVIRONMENT'] === 'local') {
-      $mail->isSendmail();
-    } else {
-      $mail->isSMTP();
-    }
+    // Always go through SMTP: locally this hits Mailpit (see setServerValuesToSendEmails),
+    // in production the real SMTP server. isSendmail() needs a local MTA binary and would
+    // never reach Mailpit, so it's never appropriate here.
+    $mail->isSMTP();
 
     //SERVER SETTINGS
     $mail = $this->setServerValuesToSendEmails($objectPhpMailer);

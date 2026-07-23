@@ -38,3 +38,6 @@ dist-ssr
 **/build/
 **/public/
 .env
+DOCKER_SETUP.md
+.atl/
+.claude/

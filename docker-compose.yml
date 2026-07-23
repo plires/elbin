@@ -1,0 +1,53 @@
+services:
+  mysql:
+    image: mariadb:10.6
+    container_name: elbin_mysql
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: secret
+      MARIADB_DATABASE: lc_elbin
+      MARIADB_USER: homestead
+      MARIADB_PASSWORD: secret
+    ports:
+      - "3306:3306"
+    volumes:
+      - elbin_mysql_data:/var/lib/mysql
+      - ./includes/elbinger_libre_site.sql:/docker-entrypoint-initdb.d/elbinger_libre_site.sql:ro
+
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: elbin_mailpit
+    restart: unless-stopped
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+
+  web:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    container_name: elbin_web
+    restart: unless-stopped
+    depends_on:
+      - mysql
+      - mailpit
+    ports:
+      - "80:80"
+    extra_hosts:
+      - "elbin.test:127.0.0.1"
+    environment:
+      # Overrides matching this project's env var names (clases/repositorioSQL.php, clases/app.php).
+      # Everything else (VITE_ROOT, VITE_NAME_APP, recaptcha keys, etc.) still loads from the
+      # bind-mounted .env file via vlucas/phpdotenv — these two are the only values that differ
+      # between host-based (Homestead) and containerized networking.
+      DSN: "mysql:host=mysql;dbname=lc_elbin;charset=utf8mb4;port=3306"
+      DB_USER: homestead
+      DB_PASS: secret
+      SMTP: mailpit
+      EMAIL_PORT: 1025
+      VITE_ENVIRONMENT: local
+    volumes:
+      - .:/var/www/html
+
+volumes:
+  elbin_mysql_data:
