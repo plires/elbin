@@ -21,12 +21,10 @@ const AcordeonItem = ({ item, defaultOpen }) => {
       </h4>
       <div
         id={item.id}
-        className={`accordion-collapse collapse ${defaultOpen ? 'show' : ''}`}
+        className={`accordion-collapse collapse ${styles.accordionContent} ${defaultOpen ? 'show' : ''}`}
         data-bs-parent='#accordionConversaciones'
       >
-        <div className={`accordion-body ${styles.body}`}>
-          <p>{item.description}</p>
-        </div>
+        <div className={`accordion-body ${styles.body}`}>{item.content}</div>
       </div>
     </div>
   )

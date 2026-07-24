@@ -1,0 +1,186 @@
+.programa {
+  align-items: center;
+  margin-top: 20px;
+}
+
+.image {
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  height: 32px;
+  margin-bottom: 15px;
+}
+
+.title {
+  color: var(--primary-color);
+  font-size: 1.5rem !important;
+  margin-bottom: 15px;
+}
+
+.content p {
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+}
+
+.partners {
+  margin: 20px 0;
+}
+
+.partnersLabel {
+  display: block;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.partnersLogos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.partnersLogos img {
+  height: 30px;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Especificidad extra (elemento + 2 clases) a propósito: button.module.css
+   trae una regla ".button:not(.collapsed)" que por el scoping de CSS Modules
+   nunca matchea el "collapsed" real de Bootstrap, así que siempre gana con
+   background rojo salvo que la pisemos con más especificidad. */
+.ctas a.primaryBtn {
+  background: var(--primary-color) !important;
+  color: white !important;
+}
+
+.ctas a.outlineBtn {
+  background: transparent !important;
+  color: var(--primary-color) !important;
+  border: 1px solid var(--primary-color) !important;
+}
+
+.ctas a.outlineBtn:hover {
+  background: var(--primary-color) !important;
+  color: white !important;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .contentImage {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .image {
+    margin-bottom: 0;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .title {
+    font-size: 2.25rem !important;
+  }
+
+  .content p {
+    font-size: 0.95rem;
+  }
+
+  .partners {
+    margin: 0;
+    margin: 3rem 0;
+  }
+
+  .partnersLabel {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .partnersLogos {
+    gap: 2rem;
+  }
+
+  .partnersLogos img {
+    height: 36px;
+  }
+}
+
+@media (min-width: 992px) {
+  .contentImage {
+    text-align: initial;
+    margin-bottom: 0;
+  }
+
+  .image {
+    object-fit: cover;
+    height: 530px !important;
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .programa {
+    margin-top: 3rem !important;
+  }
+
+  .image {
+    height: auto !important;
+  }
+
+  .logo {
+    height: 48px;
+  }
+
+  .title {
+    font-size: 2.5rem !important;
+  }
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+  .logo {
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .title {
+    font-size: 2.75rem !important;
+  }
+
+  .partners {
+    margin-bottom: 4rem;
+  }
+
+  .partnersLabel {
+    font-size: 1.25rem;
+  }
+
+  .partnersLogos {
+    gap: 3rem;
+  }
+
+  .partnersLogos img {
+    height: auto;
+  }
+}

@@ -1,10 +1,10 @@
 .item {
   border: none !important;
-  border-top: 2px solid var(--secondary-color) !important;
+  border-top: 1px solid var(--primary-color) !important;
 }
 
 .item:last-child {
-  border-bottom: 2px solid var(--secondary-color) !important;
+  border-bottom: 1px solid var(--primary-color) !important;
 }
 
 .button {
@@ -40,6 +40,11 @@
 .title {
   color: var(--primary-color);
   font-size: 1rem;
+}
+
+.accordionContent {
+  border-top: solid 1px var(--primary-color);
+  padding-top: 1rem;
 }
 
 .body {
