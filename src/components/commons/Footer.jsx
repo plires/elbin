@@ -115,6 +115,9 @@ const Footer = ({ special }) => {
                 <Link className='transition' to='/about'>
                   SOBRE ELBIN
                 </Link>
+                <Link className='transition' to='/sustenta'>
+                  ELBIN SUSTENTA
+                </Link>
                 {/* <Link className='transition' to='#'>
                 NOTAS
               </Link> */}

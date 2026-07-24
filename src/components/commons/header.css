@@ -217,9 +217,13 @@ header .rrss li:last-child img {
     align-items: center;
   }
 
+  header nav ul li:first-child {
+    padding-left: 20px;
+  }
+
   header nav ul li {
     height: initial;
-    padding-right: 30px;
+    padding-right: 20px;
   }
 
   header nav ul li:last-child {
@@ -258,11 +262,11 @@ header .rrss li:last-child img {
 
 @media (min-width: 1200px) {
   header nav ul li {
-    padding-right: 50px;
+    padding-right: 40px;
   }
 
   header nav ul li:last-child {
-    padding-right: 100px;
+    padding-right: 70px;
   }
 
   header nav ul li a {
@@ -276,13 +280,13 @@ header .rrss li:last-child img {
   }
 
   header nav ul li {
-    padding-right: 70px;
+    padding-right: 50px;
   }
 }
 
 @media (min-width: 1600px) {
   header nav ul li {
-    padding-right: 90px;
+    padding-right: 70px;
   }
 
   header nav ul li:last-child {

@@ -8,6 +8,7 @@ import About from '@/pages/About'
 import Contacto from '@/pages/Contacto'
 import Notas from '@/pages/Notas'
 import Seguros from '@/pages/Seguros'
+import Sustenta from '@/pages/Sustenta'
 import Landing from '@/pages/Landing'
 import SegurosPersonalesCapitalizacion from '@/pages/subpages/SegurosPersonalesCapitalizacion'
 import SegurosPersonalesGeneralesPatrimoniales from '@/pages/subpages/SegurosPersonalesGeneralesPatrimoniales'
@@ -41,6 +42,7 @@ const Layout = () => {
         />
         <Route path='/notas' element={<Notas />} />
         <Route path='/seguros' element={<Seguros />} />
+        <Route path='/sustenta' element={<Sustenta />} />
         <Route
           path='/seguros/personales/capitalizacion'
           element={<SegurosPersonalesCapitalizacion />}
