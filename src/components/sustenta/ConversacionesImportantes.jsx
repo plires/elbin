@@ -1,8 +1,12 @@
 import AcordeonItem from './AcordeonItem'
 import LongevidadFuturoIntro from './LongevidadFuturoIntro'
+import EquidadLiderazgoIntro from './EquidadLiderazgoIntro'
 import ProgramaDestacado from './ProgramaDestacado'
 import reunionNext50 from '@/assets/img/sustenta/reunion-nex-50.webp'
 import logoNext50 from '@/assets/img/sustenta/next-50.webp'
+import mujeresNegocio from '@/assets/img/sustenta/mujeres-negocio.webp'
+import logoWomanPas from '@/assets/img/sustenta/woman-pas.webp'
+import logoInnovate from '@/assets/img/sustenta/logo-innovate.webp'
 import logoZurich from '@/assets/img/sustenta/logo-zurich.webp'
 import logoTheShift from '@/assets/img/sustenta/logo-the-shift.webp'
 import styles from './conversaciones-importantes.module.css'
@@ -25,10 +29,14 @@ const items = [
             'Una nueva etapa profesional con propósito para quienes construyeron una carrera sólida, en una empresa, en relación de dependencia o de forma independiente, en banca, finanzas, derecho, contabilidad o el mundo corporativo.',
             'En Elbin convertís décadas de trayectoria en un rol concreto como asesor de planificación financiera.',
           ]}
-          partnersLabel='Con el apoyo de'
-          partners={[
-            { src: logoZurich, alt: 'Zurich' },
-            { src: logoTheShift, alt: 'The Shift Certified' },
+          partnerGroups={[
+            {
+              label: 'Con el apoyo de',
+              partners: [
+                { src: logoZurich, alt: 'Zurich' },
+                { src: logoTheShift, alt: 'The Shift Certified' },
+              ],
+            },
           ]}
           primaryCta={{ text: 'POSTULATE', href: '#' }}
           secondaryCta={{ text: 'DESCARGAR PDF', href: '#' }}
@@ -41,10 +49,31 @@ const items = [
     number: '02',
     title: 'Equidad y Liderazgo',
     content: (
-      <p>
-        Contenido ficticio: acá va la descripción real de este item cuando la
-        definamos juntos.
-      </p>
+      <>
+        <EquidadLiderazgoIntro />
+        <ProgramaDestacado
+          image={mujeresNegocio}
+          imageAlt='Asesora del Programa Mujeres en Negocios'
+          logo={logoWomanPas}
+          logoAlt='WomanPas'
+          title='Mujeres en Negocios'
+          description={[
+            'Un programa gratuito que está diseñado específicamente para motivar, impulsar y dar las herramientas adecuadas a las asesoras financieras, acompañándolas en su desarrollo profesional para que puedan construir sus propias empresas.',
+          ]}
+          partnerGroups={[
+            {
+              label: 'Desarrollado por:',
+              partners: [{ src: logoInnovate, alt: 'Innovate' }],
+            },
+            {
+              label: 'Con el apoyo de',
+              partners: [{ src: logoZurich, alt: 'Zurich' }],
+            },
+          ]}
+          primaryCta={{ text: 'POSTULATE', href: '#' }}
+          secondaryCta={{ text: 'DESCARGAR PDF', href: '#' }}
+        />
+      </>
     ),
   },
   {

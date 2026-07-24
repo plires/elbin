@@ -24,8 +24,16 @@
   margin-bottom: 15px;
 }
 
-.partners {
+.partnerGroups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
   margin: 20px 0;
+}
+
+.partnerGroup {
+  display: flex;
+  flex-direction: column;
 }
 
 .partnersLabel {
@@ -99,7 +107,7 @@
     font-size: 0.95rem;
   }
 
-  .partners {
+  .partnerGroups {
     margin: 0;
     margin: 3rem 0;
   }
@@ -168,7 +176,7 @@
     font-size: 2.75rem !important;
   }
 
-  .partners {
+  .partnerGroups {
     margin-bottom: 4rem;
   }
 

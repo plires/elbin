@@ -8,8 +8,7 @@ const ProgramaDestacado = ({
   logoAlt,
   title,
   description,
-  partnersLabel,
-  partners,
+  partnerGroups,
   primaryCta,
   secondaryCta,
 }) => {
@@ -32,14 +31,18 @@ const ProgramaDestacado = ({
           <p key={index}>{paragraph}</p>
         ))}
 
-        {partners?.length > 0 && (
-          <div className={styles.partners}>
-            <span className={styles.partnersLabel}>{partnersLabel}</span>
-            <div className={styles.partnersLogos}>
-              {partners.map((partner, index) => (
-                <img key={index} src={partner.src} alt={partner.alt} />
-              ))}
-            </div>
+        {partnerGroups?.length > 0 && (
+          <div className={styles.partnerGroups}>
+            {partnerGroups.map((group, groupIndex) => (
+              <div key={groupIndex} className={styles.partnerGroup}>
+                <span className={styles.partnersLabel}>{group.label}</span>
+                <div className={styles.partnersLogos}>
+                  {group.partners.map((partner, index) => (
+                    <img key={index} src={partner.src} alt={partner.alt} />
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         )}
 
