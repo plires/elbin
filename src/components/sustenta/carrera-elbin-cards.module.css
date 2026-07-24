@@ -1,0 +1,135 @@
+.wrapper {
+  margin-top: 20px;
+}
+
+.heading {
+  color: var(--primary-color);
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+}
+
+.subheading {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--primary-color);
+  border-radius: 1rem;
+  padding: 20px;
+}
+
+.cardText {
+  color: var(--text-color);
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.cardText strong {
+  color: var(--third-color);
+}
+
+.cardText:last-of-type {
+  margin-bottom: 0;
+}
+
+.cardSubtext {
+  color: var(--text-color);
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+
+.cardTitle {
+  color: var(--third-color);
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.iconWrap {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 15px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 2.25rem;
+  }
+
+  .subheading {
+    font-size: 1.1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      'card1 card2 card4'
+      'card3 card3 card4';
+  }
+
+  .card1 {
+    grid-area: card1;
+  }
+
+  .card2 {
+    grid-area: card2;
+  }
+
+  .card3 {
+    grid-area: card3;
+  }
+
+  .card4 {
+    grid-area: card4;
+  }
+
+  .cardText {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  .heading {
+    font-size: 2.75rem;
+  }
+
+  .icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}

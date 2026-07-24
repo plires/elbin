@@ -1,6 +1,8 @@
 import AcordeonItem from './AcordeonItem'
 import LongevidadFuturoIntro from './LongevidadFuturoIntro'
 import EquidadLiderazgoIntro from './EquidadLiderazgoIntro'
+import AutonomiaEconomicaIntro from './AutonomiaEconomicaIntro'
+import CarreraElbinCards from './CarreraElbinCards'
 import ProgramaDestacado from './ProgramaDestacado'
 import reunionNext50 from '@/assets/img/sustenta/reunion-nex-50.webp'
 import logoNext50 from '@/assets/img/sustenta/next-50.webp'
@@ -89,10 +91,10 @@ const items = [
     number: '03',
     title: 'Autonomía económica',
     content: (
-      <p>
-        Contenido ficticio: acá va la descripción real de este item cuando la
-        definamos juntos.
-      </p>
+      <>
+        <AutonomiaEconomicaIntro />
+        <CarreraElbinCards />
+      </>
     ),
   },
 ]
