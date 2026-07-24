@@ -61,24 +61,38 @@
   margin-top: 10px;
 }
 
-/* Especificidad extra (elemento + 2 clases) a propósito: button.module.css
-   trae una regla ".button:not(.collapsed)" que por el scoping de CSS Modules
-   nunca matchea el "collapsed" real de Bootstrap, así que siempre gana con
-   background rojo salvo que la pisemos con más especificidad. */
-.ctas a.primaryBtn {
-  background: var(--primary-color) !important;
-  color: white !important;
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-align: center;
+  border: 2px solid var(--third-color);
+  transition: all ease-in-out 0.3s;
 }
 
-.ctas a.outlineBtn {
-  background: transparent !important;
-  color: var(--primary-color) !important;
-  border: 1px solid var(--primary-color) !important;
+.btnPrimary {
+  background: var(--third-color);
+  color: white;
 }
 
-.ctas a.outlineBtn:hover {
-  background: var(--primary-color) !important;
-  color: white !important;
+.btnPrimary:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.btnOutline {
+  background: transparent;
+  color: var(--third-color);
+}
+
+.btnOutline:hover {
+  background: var(--third-color);
+  color: white;
 }
 
 /* MEDIA QUERIES */

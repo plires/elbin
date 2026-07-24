@@ -9,6 +9,8 @@ import logoWomanPas from '@/assets/img/sustenta/woman-pas.webp'
 import logoInnovate from '@/assets/img/sustenta/logo-innovate.webp'
 import logoZurich from '@/assets/img/sustenta/logo-zurich.webp'
 import logoTheShift from '@/assets/img/sustenta/logo-the-shift.webp'
+import pdfNext50 from '@/assets/pdf/programa-next-50.pdf'
+import pdfMujeresEnNegocios from '@/assets/pdf/programa-mujeres-en-negocios.pdf'
 import styles from './conversaciones-importantes.module.css'
 
 const items = [
@@ -38,8 +40,11 @@ const items = [
               ],
             },
           ]}
-          primaryCta={{ text: 'POSTULATE', href: '#' }}
-          secondaryCta={{ text: 'DESCARGAR PDF', href: '#' }}
+          primaryCta={{
+            text: 'Postulate',
+            href: 'https://docs.google.com/forms/d/e/1FAIpQLSeC2HtqPDlK-rxAtwLMEuSTOxBoVEl7vHpGsok1SBrpOzHhbw/viewform',
+          }}
+          secondaryCta={{ text: 'Descargar PDF', href: pdfNext50 }}
         />
       </>
     ),
@@ -70,8 +75,11 @@ const items = [
               partners: [{ src: logoZurich, alt: 'Zurich' }],
             },
           ]}
-          primaryCta={{ text: 'POSTULATE', href: '#' }}
-          secondaryCta={{ text: 'DESCARGAR PDF', href: '#' }}
+          primaryCta={{
+            text: 'Postulate',
+            href: 'https://docs.google.com/forms/d/e/1FAIpQLSdvjk3KxuVcIgyVG_lZbcydYJGaAxVsmwW9ZcT_OmQgQ_Saig/closedform',
+          }}
+          secondaryCta={{ text: 'Descargar PDF', href: pdfMujeresEnNegocios }}
         />
       </>
     ),

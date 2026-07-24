@@ -1,4 +1,3 @@
-import ButtonApp from '@/components/commons/ButtonApp'
 import styles from './programa-destacado.module.css'
 
 const ProgramaDestacado = ({
@@ -48,26 +47,24 @@ const ProgramaDestacado = ({
 
         <div className={styles.ctas}>
           {primaryCta && (
-            <ButtonApp
-              variant='primary'
-              size='md'
-              className={styles.primaryBtn}
-              to={primaryCta.to}
+            <a
+              className={`${styles.btn} ${styles.btnPrimary}`}
               href={primaryCta.href}
+              target='_blank'
+              rel='noopener noreferrer'
             >
               {primaryCta.text}
-            </ButtonApp>
+            </a>
           )}
           {secondaryCta && (
-            <ButtonApp
-              variant='primary'
-              size='md'
-              className={styles.outlineBtn}
-              to={secondaryCta.to}
+            <a
+              className={`${styles.btn} ${styles.btnOutline}`}
               href={secondaryCta.href}
+              target='_blank'
+              rel='noopener noreferrer'
             >
               {secondaryCta.text}
-            </ButtonApp>
+            </a>
           )}
         </div>
       </div>
