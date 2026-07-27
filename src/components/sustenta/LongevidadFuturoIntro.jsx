@@ -1,4 +1,12 @@
 import styles from './longevidad-futuro-intro.module.css'
+import CountUpNumber from './CountUpNumber'
+
+const parseStatValue = (value) => {
+  const match = value.match(/^([+-]?)(\d+)$/)
+  if (!match) return { prefix: '', target: 0 }
+  const [, prefix, digits] = match
+  return { prefix, target: Number(digits) }
+}
 
 const stats = [
   {
@@ -40,15 +48,19 @@ const LongevidadFuturoIntro = () => {
       </p>
 
       <div className={`row ${styles.stats}`}>
-        {stats.map((stat, index) => (
-          <div key={index} className={`col-6 col-md ${styles.stat}`}>
-            <p className={`chillax ${styles.value}`}>
-              {stat.value}
-              <span className={styles.suffix}>{stat.suffix}</span>
-            </p>
-            <p className={styles.label}>{stat.label}</p>
-          </div>
-        ))}
+        {stats.map((stat, index) => {
+          const { prefix, target } = parseStatValue(stat.value)
+          return (
+            <div key={index} className={`col-6 col-md ${styles.stat}`}>
+              <p className={`chillax ${styles.value}`}>
+                {prefix}
+                <CountUpNumber target={target} />
+                <span className={styles.suffix}>{stat.suffix}</span>
+              </p>
+              <p className={styles.label}>{stat.label}</p>
+            </div>
+          )
+        })}
       </div>
 
       <p>
