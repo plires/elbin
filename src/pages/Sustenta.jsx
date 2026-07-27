@@ -1,6 +1,7 @@
 import SustentaHeader from '@/components/sustenta/SustentaHeader'
 import ConversacionesImportantes from '@/components/sustenta/ConversacionesImportantes'
 import ProgramaNext50 from '@/components/sustenta/ProgramaNext50'
+import CountdownApertura from '@/components/sustenta/CountdownApertura'
 
 const Sustenta = () => {
   return (
@@ -8,6 +9,7 @@ const Sustenta = () => {
       <SustentaHeader />
       <ConversacionesImportantes />
       <ProgramaNext50 />
+      <CountdownApertura />
     </main>
   )
 }

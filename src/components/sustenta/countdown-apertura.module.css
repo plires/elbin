@@ -1,0 +1,187 @@
+.countdown {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0 90px;
+  background: radial-gradient(
+    ellipse at center,
+    #ffffff 0%,
+    var(--secondary-color) 75%
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 10px 24px;
+  border: 1px solid var(--third-color);
+  border-radius: 999px;
+  color: var(--third-color);
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 30px;
+}
+
+.timer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.timerBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.timerValue {
+  font-family: 'Chillax';
+  font-weight: 700;
+  color: var(--third-color);
+  font-size: 2.75rem;
+  line-height: 1;
+}
+
+.timerLabel {
+  font-weight: 700;
+  color: var(--third-color);
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+
+.title {
+  color: var(--quart-color);
+  font-size: 1.25rem;
+  margin-bottom: 25px;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 36px;
+  border-radius: 999px;
+  background: var(--quart-color);
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all ease-in-out 0.3s;
+}
+
+.cta:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.hint {
+  display: block;
+  color: var(--quart-color);
+  font-size: 0.8rem;
+  margin-top: 12px;
+}
+
+.figuras {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .countdown {
+    padding: 80px 0 110px;
+  }
+
+  .badge {
+    font-size: 1rem;
+  }
+
+  .timer {
+    gap: 40px;
+    margin-bottom: 25px;
+  }
+
+  .timerBlock {
+    min-width: 120px;
+  }
+
+  .timerValue {
+    font-size: 4.5rem;
+  }
+
+  .timerLabel {
+    font-size: 1.1rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .cta {
+    font-size: 1rem;
+    padding: 16px 42px;
+  }
+
+  .hint {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .timerBlock {
+    min-width: 140px;
+  }
+
+  .timerValue {
+    font-size: 5.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .timer {
+    gap: 60px;
+  }
+
+  .timerBlock {
+    min-width: 150px;
+  }
+
+  .timerValue {
+    font-size: 6rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1500px) {
+  .countdown {
+    padding-bottom: 8%;
+  }
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}
