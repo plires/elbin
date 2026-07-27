@@ -3,6 +3,7 @@ import LongevidadFuturoIntro from './LongevidadFuturoIntro'
 import EquidadLiderazgoIntro from './EquidadLiderazgoIntro'
 import AutonomiaEconomicaIntro from './AutonomiaEconomicaIntro'
 import CarreraElbinCards from './CarreraElbinCards'
+import ProductorSegurosCta from './ProductorSegurosCta'
 import ProgramaDestacado from './ProgramaDestacado'
 import reunionNext50 from '@/assets/img/sustenta/reunion-nex-50.webp'
 import logoNext50 from '@/assets/img/sustenta/next-50.webp'
@@ -94,6 +95,7 @@ const items = [
       <>
         <AutonomiaEconomicaIntro />
         <CarreraElbinCards />
+        <ProductorSegurosCta />
       </>
     ),
   },

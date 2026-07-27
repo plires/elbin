@@ -1,0 +1,84 @@
+.banner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 220px;
+  margin-top: 30px;
+  padding: 30px 20px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-image: url('./../../assets/img/sustenta/productor-seguros.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.title {
+  font-family: 'Chillax';
+  font-weight: 500;
+  color: white;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  max-width: 480px;
+  margin-bottom: 20px;
+}
+
+.title strong {
+  font-weight: 700;
+}
+
+.cta {
+  border-radius: 999px !important;
+  padding: 14px 36px !important;
+  font-size: 0.9rem;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .banner {
+    min-height: 280px;
+    padding: 40px;
+  }
+
+  .title {
+    font-size: 1.75rem;
+    max-width: 620px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  .banner {
+    min-height: 320px;
+  }
+
+  .title {
+    font-size: 2rem;
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .banner {
+    min-height: 360px;
+  }
+
+  .title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1800px) {
+}
