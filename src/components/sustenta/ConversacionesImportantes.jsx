@@ -10,6 +10,7 @@ import logoNext50 from '@/assets/img/sustenta/next-50.webp'
 import mujeresNegocio from '@/assets/img/sustenta/mujeres-negocio.webp'
 import logoWomanPas from '@/assets/img/sustenta/woman-pas.webp'
 import logoInnovate from '@/assets/img/sustenta/logo-innovate.webp'
+import logoElbin from '@/assets/img/logo-elbin-large.svg'
 import logoZurich from '@/assets/img/sustenta/logo-zurich.webp'
 import logoTheShift from '@/assets/img/sustenta/logo-the-shift.webp'
 import pdfNext50 from '@/assets/pdf/programa-next-50.pdf'
@@ -36,11 +37,14 @@ const items = [
           ]}
           partnerGroups={[
             {
+              partners: [{ src: logoElbin, alt: 'Logo Elbin' }],
+            },
+            {
               label: 'Con el apoyo de',
-              partners: [
-                { src: logoZurich, alt: 'Zurich' },
-                { src: logoTheShift, alt: 'The Shift Certified' },
-              ],
+              partners: [{ src: logoZurich, alt: 'Zurich' }],
+            },
+            {
+              partners: [{ src: logoTheShift, alt: 'The Shift Certified' }],
             },
           ]}
           primaryCta={{

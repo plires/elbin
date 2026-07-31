@@ -34,7 +34,9 @@ const ProgramaDestacado = ({
           <div className={styles.partnerGroups}>
             {partnerGroups.map((group, groupIndex) => (
               <div key={groupIndex} className={styles.partnerGroup}>
-                <span className={styles.partnersLabel}>{group.label}</span>
+                {group.label && (
+                  <span className={styles.partnersLabel}>{group.label}</span>
+                )}
                 <div className={styles.partnersLogos}>
                   {group.partners.map((partner, index) => (
                     <img key={index} src={partner.src} alt={partner.alt} />
