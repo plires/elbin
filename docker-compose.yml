@@ -12,7 +12,7 @@ services:
       - "3306:3306"
     volumes:
       - elbin_mysql_data:/var/lib/mysql
-      - ./includes/elbinger_libre_site.sql:/docker-entrypoint-initdb.d/elbinger_libre_site.sql:ro
+      - ./docker/db/elbinger_libre_site.sql:/docker-entrypoint-initdb.d/elbinger_libre_site.sql:ro
 
   mailpit:
     image: axllent/mailpit:latest

@@ -26,6 +26,7 @@ dist-ssr
 *.webloc
 *.sw?
 *.sql
+!docker/db/elbinger_libre_site.sql
 
 **/favicons
 **/node_modules
