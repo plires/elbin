@@ -24,6 +24,14 @@
       "sessions": 0,
       "memories": 4,
       "prompts": 0
+    },
+    {
+      "id": "941bf5dc",
+      "created_by": "pablolires",
+      "created_at": "2026-07-31T17:20:26Z",
+      "sessions": 2,
+      "memories": 2,
+      "prompts": 0
     }
   ]
 }
