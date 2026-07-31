@@ -1,8 +1,8 @@
 import styles from './iconos-animados.module.css'
 
-import maletin from '@/assets/img/home/maletin.gif'
-import usuario from '@/assets/img/home/usuario.gif'
-import grafico from '@/assets/img/home/grafico.gif'
+import maletin from '@/assets/img/home/icono-maletin.png'
+import usuario from '@/assets/img/home/icono-personas.png'
+import grafico from '@/assets/img/home/icono-grafico.png'
 
 const IconosAnimados = () => {
   return (
