@@ -20,7 +20,6 @@ import styles from './conversaciones-importantes.module.css'
 const items = [
   {
     id: 'conversacion-1',
-    number: '01',
     title: 'Longevidad y Futuro',
     content: (
       <>
@@ -58,7 +57,6 @@ const items = [
   },
   {
     id: 'conversacion-2',
-    number: '02',
     title: 'Equidad y Liderazgo',
     content: (
       <>
@@ -93,7 +91,6 @@ const items = [
   },
   {
     id: 'conversacion-3',
-    number: '03',
     title: 'Autonomía económica',
     content: (
       <>

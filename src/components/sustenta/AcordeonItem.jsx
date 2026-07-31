@@ -15,7 +15,6 @@ const AcordeonItem = ({ item, defaultOpen }) => {
           aria-expanded={defaultOpen ? 'true' : 'false'}
           aria-controls={item.id}
         >
-          <span className={styles.number}>{item.number}/</span>
           <span className={styles.title}>{item.title}</span>
         </button>
       </h4>
