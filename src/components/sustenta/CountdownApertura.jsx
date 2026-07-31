@@ -56,7 +56,7 @@ const CountdownApertura = () => {
   return (
     <section className={styles.countdown}>
       <div className='container'>
-        <div data-aos='fade-up' className={styles.content}>
+        <div className={styles.content}>
           <span className={styles.badge}>{fechaLabel}</span>
 
           <div className={styles.timer}>

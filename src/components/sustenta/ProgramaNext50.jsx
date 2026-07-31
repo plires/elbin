@@ -8,7 +8,7 @@ const ProgramaNext50 = () => {
       <div className={styles.overlay} />
 
       <div className='container'>
-        <div data-aos='fade-up' className={styles.content}>
+        <div className={styles.content}>
           <span className={styles.eyebrow}>El nuevo programa de Elbin</span>
 
           <img
