@@ -84,7 +84,7 @@ const CountdownApertura = () => {
 
           <a
             className={styles.cta}
-            href='https://docs.google.com/forms/d/e/1FAIpQLSeC2HtqPDlK-rxAtwLMEuSTOxBoVEl7vHpGsok1SBrpOzHhbw/viewform'
+            href='https://forms.gle/5uEjGGp2DQMVcrq97 '
             target='_blank'
             rel='noopener noreferrer'
           >

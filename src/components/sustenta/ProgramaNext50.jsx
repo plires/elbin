@@ -22,14 +22,14 @@ const ProgramaNext50 = () => {
           </h3>
 
           <p className={styles.text}>
-            <span className={styles.highlight}>Sumate a Next50</span> y
-            convertí tu trayectoria en tu mayor ventaja competitiva.
+            <span className={styles.highlight}>Sumate a Next50</span> y convertí
+            tu trayectoria en tu mayor ventaja competitiva.
           </p>
 
           <div className={styles.ctas}>
             <a
               className={`${styles.btn} ${styles.btnPrimary}`}
-              href='https://docs.google.com/forms/d/e/1FAIpQLSeC2HtqPDlK-rxAtwLMEuSTOxBoVEl7vHpGsok1SBrpOzHhbw/viewform'
+              href='https://forms.gle/5uEjGGp2DQMVcrq97 '
               target='_blank'
               rel='noopener noreferrer'
             >
